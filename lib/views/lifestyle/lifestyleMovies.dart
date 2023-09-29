@@ -23,15 +23,13 @@ class LifeStyleMovies extends StatelessWidget {
                         color: Colors.transparent,
                         padding: const EdgeInsets.only(
                             top: 10, left: 2, bottom: 10, right: 10),
-                        child: SvgPicture.asset("assets/media/svg/arrowleft.svg")),
+                        child:
+                            SvgPicture.asset("assets/media/svg/arrowleft.svg")),
                   ),
                 ],
               ),
               const SizedBox(
-                height: 20,
-              ),
-              const SizedBox(
-                height: 20,
+                height: 39,
               ),
               Row(
                 children: [
@@ -55,6 +53,14 @@ class LifeStyleMovies extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 70,
+              ),
+              Image.asset(
+                "assets/media/coming_soon.png",
+                height: 218,
+                width: 300,
+              )
             ],
           ),
         ),

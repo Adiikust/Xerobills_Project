@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:xerobills/widgets/rich_text.dart';
 import '../../controllers/selectionController.dart';
 
 class ManageProfiles extends StatelessWidget {
@@ -30,13 +31,9 @@ class ManageProfiles extends StatelessWidget {
                         child:
                             SvgPicture.asset("assets/media/svg/arrowleft.svg")),
                   ),
-                  const Text(
-                    "Manage Profiles",
-                    style: TextStyle(
-                        fontFamily: "Poppins",
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xff026F2E)),
+                  CustomRichText(
+                    firstText: "Manage",
+                    secondText: "Profiles",
                   ),
                   GestureDetector(
                     onTap: () {

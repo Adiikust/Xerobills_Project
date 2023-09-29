@@ -4,17 +4,35 @@ import 'package:get/get.dart';
 import 'package:xerobills/controllers/dropDownController.dart';
 import 'package:xerobills/controllers/paymentMethodController.dart';
 import 'package:xerobills/widgets/customPlanOption.dart';
+import 'package:xerobills/widgets/drop_down_widget_two.dart';
+import 'package:xerobills/widgets/rich_text_two.dart';
 
-class InternetSubscription extends StatelessWidget {
+class InternetSubscription extends StatefulWidget {
   InternetSubscription({super.key});
+
+  @override
+  State<InternetSubscription> createState() => _InternetSubscriptionState();
+}
+
+class _InternetSubscriptionState extends State<InternetSubscription> {
   final PaymentMethodController controller = Get.put(PaymentMethodController());
+
   final DropdownController dropdownController = Get.put(DropdownController());
+  List<String> dailyBundlesList = [
+    "Daily Bundles 1",
+    "Daily Bundles 2",
+    "Daily Bundles 3",
+    "Daily Bundles 4",
+    "Daily Bundles 5",
+  ];
+
+  String? _selectedDailyBundles;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 15),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Column(
@@ -34,12 +52,9 @@ class InternetSubscription extends StatelessWidget {
                           child: SvgPicture.asset(
                               "assets/media/svg/arrowleft.svg")),
                     ),
-                    const Text(
-                      "Internet Subscription",
-                      style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 20,
-                          color: Color(0xff026F2E)),
+                    CustomRichTextTwo(
+                      firstText: "Internet",
+                      secondText: "Subscription",
                     ),
                     Container(
                       width: 30,
@@ -47,7 +62,7 @@ class InternetSubscription extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 16,
                 ),
                 const Text(
                   "Select Beneficiary",
@@ -65,7 +80,15 @@ class InternetSubscription extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                       color: const Color(0xffBFD7DE),
-                      borderRadius: BorderRadius.circular(9)),
+                      borderRadius: BorderRadius.circular(9),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5), // Shadow color
+                          offset: const Offset(3, 3), // Shadow position (X, Y)
+                          blurRadius: 3, // Blur radius
+                          spreadRadius: 0, // Spread radius
+                        ),
+                      ]),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -118,7 +141,7 @@ class InternetSubscription extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 19,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -132,51 +155,32 @@ class InternetSubscription extends StatelessWidget {
                     ),
                     const SizedBox(width: 12),
                     Expanded(
-                      child: Container(
-                        height: 45,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: const Color(0xff026F2E)),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        padding: const EdgeInsets.symmetric(horizontal: 15),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const Text(
-                              "MTN Network",
-                              style: TextStyle(
-                                  color: Color(0xff003333),
-                                  fontSize: 15,
-                                  fontFamily: "Poppings"),
-                            ),
-                            SvgPicture.asset("assets/media/svg/vector-2.svg")
-                          ],
-                        ),
+                      child: ReusableDropdownContainerTwo(
+                        itemList: dailyBundlesList, // Your list of items
+                        selectedValue:
+                            _selectedDailyBundles, // The selected value
+                        onChanged: (newValue) {
+                          setState(() {
+                            _selectedDailyBundles = newValue;
+                            print("Gender ${_selectedDailyBundles.toString()}");
+                          });
+                        },
+                        hintText: "MTN Network", // The hint text
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 15),
-                Container(
-                  height: 45,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: const Color(0xff026F2E)),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        "Daily Bundles",
-                        style: TextStyle(
-                            color: Color(0xff003333),
-                            fontSize: 15,
-                            fontFamily: "Poppings"),
-                      ),
-                      SvgPicture.asset("assets/media/svg/vector-2.svg")
-                    ],
-                  ),
+                ReusableDropdownContainerTwo(
+                  itemList: dailyBundlesList, // Your list of items
+                  selectedValue: _selectedDailyBundles, // The selected value
+                  onChanged: (newValue) {
+                    setState(() {
+                      _selectedDailyBundles = newValue;
+                      print("Gender ${_selectedDailyBundles.toString()}");
+                    });
+                  },
+                  hintText: "Select", // The hint text
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),

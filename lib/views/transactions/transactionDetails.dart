@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:xerobills/widgets/dashboard.dart';
+import 'package:xerobills/widgets/rich_text_two.dart';
 
 class TransactionDetails extends StatelessWidget {
   const TransactionDetails({super.key});
@@ -15,7 +16,7 @@ class TransactionDetails extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
           child: Center(
             child: Padding(
-              padding: const EdgeInsets.only(left: 25, right: 25, top: 15),
+              padding: const EdgeInsets.only(left: 25, right: 25, top: 17),
               child: Column(
                 children: [
                   Row(
@@ -32,13 +33,9 @@ class TransactionDetails extends StatelessWidget {
                             child: SvgPicture.asset(
                                 "assets/media/svg/arrowleft.svg")),
                       ),
-                      const Text(
-                        "Transaction Details",
-                        style: TextStyle(
-                            fontFamily: "Poppins",
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xff026F2E)),
+                      CustomRichTextTwo(
+                        firstText: "Transaction",
+                        secondText: "Details",
                       ),
                       Container(
                         width: 30,
@@ -81,10 +78,19 @@ class TransactionDetails extends StatelessWidget {
                   Container(
                     height: 265,
                     decoration: BoxDecoration(
-                      border:
-                          Border.all(color: const Color(0xff026F2E), width: 1),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                        color: Colors.white,
+                        border: Border.all(
+                            color: const Color(0xff026F2E), width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5), // Shadow color
+                            offset:
+                                const Offset(3, 3), // Shadow position (X, Y)
+                            blurRadius: 3, // Blur radius
+                            spreadRadius: 0, // Spread radius
+                          ),
+                        ]),
                     padding: const EdgeInsets.symmetric(
                         horizontal: 15, vertical: 10),
                     child: Column(
@@ -213,10 +219,19 @@ class TransactionDetails extends StatelessWidget {
                   Container(
                     height: 67.5,
                     decoration: BoxDecoration(
-                      border:
-                          Border.all(color: const Color(0xffBFD7DE), width: 1),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                        color: Colors.white,
+                        border: Border.all(
+                            color: const Color(0xffBFD7DE), width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5), // Shadow color
+                            offset:
+                                const Offset(3, 3), // Shadow position (X, Y)
+                            blurRadius: 3, // Blur radius
+                            spreadRadius: 0, // Spread radius
+                          ),
+                        ]),
                     padding: const EdgeInsets.symmetric(
                         horizontal: 15, vertical: 10),
                     child: Row(
@@ -349,15 +364,26 @@ class TransactionDetails extends StatelessWidget {
                     child: Container(
                       height: 50,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: const Color(0xff026F2E)),
-                      ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            color: const Color(0xff026F2E),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color:
+                                  Colors.grey.withOpacity(0.5), // Shadow color
+                              offset:
+                                  const Offset(3, 3), // Shadow position (X, Y)
+                              blurRadius: 3, // Blur radius
+                              spreadRadius: 0, // Spread radius
+                            ),
+                          ]),
                       child: const Center(
                         child: Text(
                           "Go Home",
                           style: TextStyle(
                               color: Color(0xff003333),
-                              letterSpacing: 0.3,
                               fontSize: 15,
                               fontFamily: "Poppings"),
                         ),

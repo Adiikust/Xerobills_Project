@@ -14,7 +14,7 @@ class InternetSubscriptionCompleted extends StatelessWidget {
         body: Center(
           child: Padding(
             padding:
-                const EdgeInsets.only(top: 15, right: 25, left: 25, bottom: 10),
+                const EdgeInsets.only(top: 17, right: 25, left: 25, bottom: 10),
             child: SingleChildScrollView(
               physics: const BouncingScrollPhysics(),
               child: Column(
@@ -69,9 +69,17 @@ class InternetSubscriptionCompleted extends StatelessWidget {
                   Container(
                     height: 165,
                     decoration: BoxDecoration(
-                      color: const Color(0xffBFD7DE),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                        color: const Color(0xffBFD7DE),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5), // Shadow color
+                            offset:
+                                const Offset(3, 3), // Shadow position (X, Y)
+                            blurRadius: 3, // Blur radius
+                            spreadRadius: 0, // Spread radius
+                          ),
+                        ]),
                     padding: const EdgeInsets.symmetric(
                         horizontal: 15, vertical: 20),
                     child: Column(
@@ -130,7 +138,17 @@ class InternetSubscriptionCompleted extends StatelessWidget {
                               right: 7, left: 7, top: 5, bottom: 8),
                           decoration: BoxDecoration(
                               color: const Color(0xff009933),
-                              borderRadius: BorderRadius.circular(10)),
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey
+                                      .withOpacity(0.5), // Shadow color
+                                  offset: const Offset(
+                                      3, 3), // Shadow position (X, Y)
+                                  blurRadius: 3, // Blur radius
+                                  spreadRadius: 0, // Spread radius
+                                ),
+                              ]),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -222,10 +240,19 @@ class InternetSubscriptionCompleted extends StatelessWidget {
                   Container(
                     height: 67.5,
                     decoration: BoxDecoration(
-                      border:
-                          Border.all(color: const Color(0xffBFD7DE), width: 1),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                        color: Colors.white,
+                        border: Border.all(
+                            color: const Color(0xffBFD7DE), width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5), // Shadow color
+                            offset:
+                                const Offset(3, 3), // Shadow position (X, Y)
+                            blurRadius: 3, // Blur radius
+                            spreadRadius: 0, // Spread radius
+                          ),
+                        ]),
                     padding: const EdgeInsets.symmetric(
                         horizontal: 15, vertical: 10),
                     child: Row(
@@ -391,9 +418,21 @@ class InternetSubscriptionCompleted extends StatelessWidget {
                     child: Container(
                       height: 50,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: const Color(0xff026F2E)),
-                      ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            color: const Color(0xff026F2E),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color:
+                                  Colors.grey.withOpacity(0.5), // Shadow color
+                              offset:
+                                  const Offset(3, 3), // Shadow position (X, Y)
+                              blurRadius: 3, // Blur radius
+                              spreadRadius: 0, // Spread radius
+                            ),
+                          ]),
                       child: const Center(
                         child: Text(
                           "Go Home",

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:xerobills/controllers/alertSettingsController.dart';
+import 'package:xerobills/widgets/rich_text.dart';
+import 'package:xerobills/widgets/rich_text_two.dart';
 
 class AlertSettingsPage extends StatelessWidget {
   AlertSettingsPage({super.key});
@@ -13,7 +15,7 @@ class AlertSettingsPage extends StatelessWidget {
       return SafeArea(
         child: Scaffold(
           body: Padding(
-            padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
+            padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -31,13 +33,9 @@ class AlertSettingsPage extends StatelessWidget {
                           child: SvgPicture.asset(
                               "assets/media/svg/arrowleft.svg")),
                     ),
-                    const Text(
-                      "Alert Settings",
-                      style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff026F2E)),
+                    CustomRichTextTwo(
+                      firstText: "Alert",
+                      secondText: "Settings",
                     ),
                     Container(
                       width: 30,
@@ -52,7 +50,7 @@ class AlertSettingsPage extends StatelessWidget {
                   style: TextStyle(
                     fontFamily: "Poppins",
                     fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w600,
                     color: Color(0xff003333),
                   ),
                 ),

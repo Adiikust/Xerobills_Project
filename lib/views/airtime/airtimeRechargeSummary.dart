@@ -3,6 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:xerobills/views/airtime/airtimeRechargeComplete.dart';
+import 'package:xerobills/widgets/rich_text.dart';
+import 'package:xerobills/widgets/rich_text_two.dart';
 
 class AirtimeRechargeSummary extends StatelessWidget {
   const AirtimeRechargeSummary({super.key});
@@ -12,7 +14,7 @@ class AirtimeRechargeSummary extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 15),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -30,13 +32,9 @@ class AirtimeRechargeSummary extends StatelessWidget {
                         child:
                             SvgPicture.asset("assets/media/svg/arrowleft.svg")),
                   ),
-                  const Text(
-                    "Recharge Summary",
-                    style: TextStyle(
-                        fontFamily: "Poppins",
-                        fontWeight: FontWeight.w500,
-                        fontSize: 20,
-                        color: Color(0xff026F2E)),
+                  CustomRichText(
+                    firstText: "Recharge",
+                    secondText: "Summary",
                   ),
                   Container(
                     width: 30,

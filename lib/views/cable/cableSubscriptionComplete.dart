@@ -122,7 +122,17 @@ class CableSubscriptionComplete extends StatelessWidget {
                               right: 15, left: 15, top: 8, bottom: 8),
                           decoration: BoxDecoration(
                               color: const Color(0xff009933),
-                              borderRadius: BorderRadius.circular(10)),
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey
+                                      .withOpacity(0.5), // Shadow color
+                                  offset: const Offset(
+                                      3, 3), // Shadow position (X, Y)
+                                  blurRadius: 3, // Blur radius
+                                  spreadRadius: 0, // Spread radius
+                                ),
+                              ]),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [

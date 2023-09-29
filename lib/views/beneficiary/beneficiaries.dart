@@ -15,7 +15,7 @@ class Beneficiaries extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
           child: Column(
             children: [
               Row(
@@ -60,75 +60,80 @@ class Beneficiaries extends StatelessWidget {
                   ),
                 ],
               ),
-              Padding(
-                padding: EdgeInsets.only(top: 1.3.h),
-                child: Material(
-                  elevation: 2,
-                  borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(8),
-                      topRight: Radius.circular(18),
-                      bottomLeft: Radius.circular(8),
-                      bottomRight: Radius.circular(8)),
-                  child: TextField(
-                    cursorColor: Colors.black,
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      suffixIconColor: Colors.grey.shade700,
-                      suffixIconConstraints:
-                          const BoxConstraints(maxWidth: 20, maxHeight: 20),
-                      hintText: "Search beneficiary",
-                      hintStyle: TextStyle(
-                          color: Colors.grey.shade700,
-                          fontSize: 14,
-                          fontFamily: "Poppings"),
-                      contentPadding: const EdgeInsets.only(left: 29, right: 5),
-                      focusedBorder: const OutlineInputBorder(
-                        borderSide:
-                            BorderSide(width: 1, color: Color(0xff026F2E)),
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10),
-                            topRight: Radius.circular(10),
-                            bottomLeft: Radius.circular(10),
-                            bottomRight: Radius.circular(10)),
-                      ),
-                      border: const OutlineInputBorder(
-                        borderSide:
-                            BorderSide(width: 1, color: Color(0xff026F2E)),
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10),
-                            topRight: Radius.circular(10),
-                            bottomLeft: Radius.circular(10),
-                            bottomRight: Radius.circular(10)),
-                      ),
-                      enabledBorder: const OutlineInputBorder(
-                        borderSide:
-                            BorderSide(width: 1, color: Color(0xff026F2E)),
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10),
-                            topRight: Radius.circular(10),
-                            bottomLeft: Radius.circular(10),
-                            bottomRight: Radius.circular(10)),
-                      ),
-                      filled: true,
-                      fillColor: Colors.white,
+              const SizedBox(height: 29),
+              Material(
+                elevation: 2,
+                borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(8),
+                    topRight: Radius.circular(18),
+                    bottomLeft: Radius.circular(8),
+                    bottomRight: Radius.circular(8)),
+                child: TextField(
+                  cursorColor: Colors.black,
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    suffixIconColor: Colors.grey.shade700,
+                    suffixIconConstraints:
+                        const BoxConstraints(maxWidth: 20, maxHeight: 20),
+                    hintText: "Search beneficiary",
+                    hintStyle: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontSize: 14,
+                        fontFamily: "Poppings"),
+                    contentPadding: const EdgeInsets.only(left: 29, right: 5),
+                    focusedBorder: const OutlineInputBorder(
+                      borderSide:
+                          BorderSide(width: 1, color: Color(0xff026F2E)),
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                          bottomLeft: Radius.circular(10),
+                          bottomRight: Radius.circular(10)),
                     ),
-                    style: const TextStyle(
-                      fontSize: 15,
-                      color: Color(0xff000000),
+                    border: const OutlineInputBorder(
+                      borderSide:
+                          BorderSide(width: 1, color: Color(0xff026F2E)),
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                          bottomLeft: Radius.circular(10),
+                          bottomRight: Radius.circular(10)),
                     ),
+                    enabledBorder: const OutlineInputBorder(
+                      borderSide:
+                          BorderSide(width: 1, color: Color(0xff026F2E)),
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                          bottomLeft: Radius.circular(10),
+                          bottomRight: Radius.circular(10)),
+                    ),
+                    filled: true,
+                    fillColor: Colors.white,
+                  ),
+                  style: const TextStyle(
+                    fontSize: 15,
+                    color: Color(0xff000000),
                   ),
                 ),
               ),
               const SizedBox(
-                height: 15,
+                height: 24,
               ),
               Container(
-                // margin: const EdgeInsets.symmetric(vertical: 5),
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
                     color: const Color(0xffBFD7DE),
-                    borderRadius: BorderRadius.circular(10)),
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5), // Shadow color
+                        offset: const Offset(3, 3), // Shadow position (X, Y)
+                        blurRadius: 3, // Blur radius
+                        spreadRadius: 0, // Spread radius
+                      ),
+                    ]),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:xerobills/controllers/drawerController.dart';
+import 'package:xerobills/controllers/dropDownController.dart';
 import 'package:xerobills/views/airtime/airtimeRechargeDefault.dart';
 import 'package:xerobills/views/beneficiary/beneficiaries.dart';
 import 'package:xerobills/views/cable/cableSubscriptionDefault.dart';
@@ -17,6 +18,7 @@ import '../internet/internetSubscriptionDefault.dart';
 class HomePage extends StatelessWidget {
   //const HomePage({super.key});
   final DrawersController controller = Get.put(DrawersController());
+  final DropdownController dropdownController = Get.put(DropdownController());
 
   HomePage({super.key});
 
@@ -98,55 +100,6 @@ class HomePage extends StatelessWidget {
                           const EdgeInsets.only(top: 10, right: 20, left: 20),
                       child: Column(
                         children: [
-                          //heading
-                          // Row(
-                          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          //   children: [
-                          //     Row(
-                          //       crossAxisAlignment: CrossAxisAlignment.center,
-                          //       children: [
-                          //         GestureDetector(
-                          //           onTap: () {
-                          //             controller.openDrawer();
-                          //           },
-                          //           child: Padding(
-                          //             padding: const EdgeInsets.only(top: 10.0),
-                          //             child: Image.asset(
-                          //               "assets/media/default-avatar.png",
-                          //               height: 50,
-                          //               width: 50,
-                          //             ),
-                          //           ),
-                          //         ),
-                          //         Padding(
-                          //           padding: const EdgeInsets.all(8.0),
-                          //           child: Text(
-                          //             "Bashir",
-                          //             style: TextStyle(
-                          //                 color: const Color(0xff003333),
-                          //                 fontSize: 4.4.w,
-                          //                 fontFamily: "Poppings"),
-                          //           ),
-                          //         ),
-                          //       ],
-                          //     ),
-                          //     GestureDetector(
-                          //       onTap: () {
-                          //         Get.to(() => const NotificationPage());
-                          //       },
-                          //       child: Container(
-                          //         color: Colors.transparent,
-                          //         padding: const EdgeInsets.only(
-                          //             top: 10, left: 10, bottom: 10, right: 2),
-                          //         child: SvgPicture.asset(
-                          //           "assets/media/svg/clarity-notification-line.svg",
-                          //           height: 22,
-                          //           width: 22,
-                          //         ),
-                          //       ),
-                          //     ),
-                          //   ],
-                          // ),
                           const SizedBox(
                             height: 10,
                           ),

@@ -23,11 +23,19 @@ class CustomPlanOption extends StatelessWidget {
       child: Container(
         height: 45,
         decoration: BoxDecoration(
-          border: Border.all(
-            color: const Color(0xff026F2E),
-          ),
-          borderRadius: BorderRadius.circular(10),
-        ),
+            color: Colors.white,
+            border: Border.all(
+              color: const Color(0xff026F2E),
+            ),
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5), // Shadow color
+                offset: const Offset(3, 3), // Shadow position (X, Y)
+                blurRadius: 3, // Blur radius
+                spreadRadius: 0, // Spread radius
+              ),
+            ]),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

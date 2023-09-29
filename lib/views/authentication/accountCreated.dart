@@ -20,13 +20,13 @@ class AccountCreated extends StatelessWidget {
               children: [
                 SvgPicture.asset(
                   "assets/media/svg/success.svg",
-                  height: 18.h,
+                  height: 144,
+                  width: 144,
                 ),
                 const Text(
                   "Hurray!",
                   style: TextStyle(
                       color: Color(0xff003333),
-                      letterSpacing: 0.3,
                       fontSize: 24,
                       fontWeight: FontWeight.w600,
                       fontFamily: "Poppings"),
@@ -58,7 +58,7 @@ class AccountCreated extends StatelessWidget {
                       elevation: 4,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      fixedSize: const Size(270, 53),
+                      fixedSize: const Size(270, 50),
                       backgroundColor: const Color(0xff026F2E)),
                   onPressed: () {
                     Get.offAll(() => DashBoard());

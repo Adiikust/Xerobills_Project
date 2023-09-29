@@ -66,7 +66,7 @@ class LifestylePage extends StatelessWidget {
         body: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
+              padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
               child: Column(
                 children: [
                   Row(
@@ -81,7 +81,8 @@ class LifestylePage extends StatelessWidget {
                             padding: const EdgeInsets.only(
                                 top: 10, left: 2, bottom: 10, right: 10),
                             child: SvgPicture.asset(
-                                "assets/media/svg/arrowleft.svg")),
+                              "assets/media/svg/arrowleft.svg",
+                            )),
                       ),
                       GestureDetector(
                         onTap: () {
@@ -94,8 +95,11 @@ class LifestylePage extends StatelessWidget {
                             left: 10,
                             bottom: 10,
                           ),
-                          child:
-                              SvgPicture.asset("assets/media/svg/cancel.svg"),
+                          child: SvgPicture.asset(
+                            "assets/media/svg/cancel.svg",
+                            height: 24,
+                            width: 24,
+                          ),
                         ),
                       ),
                     ],

@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:xerobills/views/profile/myProfilePersonalUpdate.dart';
 import 'package:xerobills/widgets/TxtFields/customTxtField.dart';
+import 'package:xerobills/widgets/rich_text.dart';
 
 class MyProfile extends StatelessWidget {
   const MyProfile({super.key});
@@ -13,7 +14,7 @@ class MyProfile extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(top: 10, right: 25, left: 25),
+          padding: const EdgeInsets.only(top: 17, right: 25, left: 25),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Column(
@@ -37,12 +38,9 @@ class MyProfile extends StatelessWidget {
                               child: SvgPicture.asset(
                                   "assets/media/svg/arrowleft.svg")),
                         ),
-                        const Text(
-                          "My Profile ",
-                          style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontSize: 20,
-                              color: Color(0xff026F2E)),
+                        CustomRichText(
+                          firstText: "My",
+                          secondText: "Profile",
                         ),
                         Container(
                           width: 30,
@@ -57,7 +55,17 @@ class MyProfile extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(vertical: 5),
                       decoration: BoxDecoration(
                           color: const Color(0xffBFD7DE),
-                          borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                              color:
+                                  Colors.grey.withOpacity(0.5), // Shadow color
+                              offset:
+                                  const Offset(3, 3), // Shadow position (X, Y)
+                              blurRadius: 3, // Blur radius
+                              spreadRadius: 0, // Spread radius
+                            ),
+                          ]),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [

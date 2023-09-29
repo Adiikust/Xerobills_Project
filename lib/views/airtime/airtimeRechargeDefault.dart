@@ -4,19 +4,40 @@ import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:xerobills/controllers/paymentMethodController.dart';
 import 'package:xerobills/views/airtime/airtimeRechargeSummary.dart';
+import 'package:xerobills/widgets/drop_down_widget_two.dart';
+import 'package:xerobills/widgets/rich_text.dart';
+import 'package:xerobills/widgets/rich_text_two.dart';
 import '../../controllers/dropDownController.dart';
 import '../../widgets/dropdowns/customDropDown.dart';
 
-class AirtimeRechargeDefault extends StatelessWidget {
+class AirtimeRechargeDefault extends StatefulWidget {
   AirtimeRechargeDefault({super.key});
+
+  @override
+  State<AirtimeRechargeDefault> createState() => _AirtimeRechargeDefaultState();
+}
+
+class _AirtimeRechargeDefaultState extends State<AirtimeRechargeDefault> {
   final PaymentMethodController controller = Get.put(PaymentMethodController());
+
   final DropdownController dropdownController = Get.put(DropdownController());
+
+  List<String> dailyBundlesList = [
+    "MTN Prepaid 1",
+    "MTN Prepaid 2",
+    "MTN Prepaid 3",
+    "MTN Prepaid 4",
+    "MTN Prepaid 5",
+  ];
+
+  String? _selectedDailyBundles;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 15),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Column(
@@ -36,13 +57,9 @@ class AirtimeRechargeDefault extends StatelessWidget {
                           child: SvgPicture.asset(
                               "assets/media/svg/arrowleft.svg")),
                     ),
-                    const Text(
-                      "Recharge Airtime",
-                      style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          color: Color(0xff026F2E)),
+                    CustomRichText(
+                      firstText: "Recharge",
+                      secondText: "Airtime",
                     ),
                     Container(
                       width: 30,
@@ -153,41 +170,19 @@ class AirtimeRechargeDefault extends StatelessWidget {
                                     width: 10,
                                   ),
                                   Expanded(
-                                    child: Container(
-                                      height: 45,
-                                      decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          border: Border.all(
-                                              color: const Color(0xff026F2E)),
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.black.withOpacity(
-                                                  0.15), // Shadow color
-                                              offset: const Offset(3,
-                                                  3), // Shadow position (X, Y)
-                                              blurRadius: 3, // Blur radius
-                                              spreadRadius: 0, // Spread radius
-                                            ),
-                                          ]),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 15),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          const Text(
-                                            "MTN Prepaid",
-                                            style: TextStyle(
-                                                color: Color(0xff003333),
-                                                fontSize: 15,
-                                                fontFamily: "Poppings"),
-                                          ),
-                                          SvgPicture.asset(
-                                              "assets/media/svg/vector-2.svg")
-                                        ],
-                                      ),
+                                    child: ReusableDropdownContainerTwo(
+                                      itemList:
+                                          dailyBundlesList, // Your list of items
+                                      selectedValue:
+                                          _selectedDailyBundles, // The selected value
+                                      onChanged: (newValue) {
+                                        setState(() {
+                                          _selectedDailyBundles = newValue;
+                                          print(
+                                              "Gender ${_selectedDailyBundles.toString()}");
+                                        });
+                                      },
+                                      hintText: "MTN Network", // The hint text
                                     ),
                                   ),
                                 ],

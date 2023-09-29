@@ -2,11 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:xerobills/widgets/drop_down_widget.dart';
+import 'package:xerobills/widgets/rich_text.dart';
+import 'package:xerobills/widgets/rich_text_two.dart';
 
 import '../../widgets/TxtFields/customTxtField.dart';
 
-class AddBeneficiary extends StatelessWidget {
+class AddBeneficiary extends StatefulWidget {
   const AddBeneficiary({super.key});
+
+  @override
+  State<AddBeneficiary> createState() => _AddBeneficiaryState();
+}
+
+class _AddBeneficiaryState extends State<AddBeneficiary> {
+  List<String> distroList = [
+    "Distro 1",
+    "Distro 2",
+    "Distro 3",
+    "Distro 4",
+    "Distro 5",
+  ];
+
+  String? _selectedDistro;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +32,7 @@ class AddBeneficiary extends StatelessWidget {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
+            padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -32,12 +50,9 @@ class AddBeneficiary extends StatelessWidget {
                           child: SvgPicture.asset(
                               "assets/media/svg/arrowleft.svg")),
                     ),
-                    const Text(
-                      "Add Beneficiary",
-                      style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 20,
-                          color: Color(0xff026F2E)),
+                    CustomRichText(
+                      firstText: "Add",
+                      secondText: "Beneficiary",
                     ),
                     GestureDetector(
                       onTap: () {
@@ -60,12 +75,12 @@ class AddBeneficiary extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 21,
                 ),
                 const Text(
                   "Abdulhaqq Sule",
                   style: TextStyle(
-                    fontSize: 22,
+                    fontSize: 24,
                     fontWeight: FontWeight.w500,
                     fontFamily: "Poppings",
                   ),
@@ -73,7 +88,8 @@ class AddBeneficiary extends StatelessWidget {
                 const Text(
                   "Add new beneficiary details",
                   style: TextStyle(
-                    fontSize: 13,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
                     fontFamily: "Poppings",
                   ),
                 ),
@@ -106,14 +122,22 @@ class AddBeneficiary extends StatelessWidget {
                       fontSize: 16,
                       color: Color(0xff003333)),
                 ),
-                CustomTxtField(
-                  hintText: "Distro",
-                  obscureText: false,
-                  topPAdding: 1.3.h,
-                  hintStyle: TextStyle(
-                      color: Colors.grey.shade700,
-                      fontSize: 15,
-                      fontFamily: "Poppings"),
+                const SizedBox(
+                  height: 10,
+                ),
+                ReusableDropdownContainer(
+                  itemList: distroList, // Your list of items
+                  selectedValue: _selectedDistro, // The selected value
+                  onChanged: (newValue) {
+                    setState(() {
+                      _selectedDistro = newValue;
+                      print("Gender ${_selectedDistro.toString()}");
+                    });
+                  },
+                  hintText: "Select", // The hint text
+                ),
+                const SizedBox(
+                  height: 5,
                 ),
                 CustomTxtField(
                   hintText: "Meter Number",
@@ -142,6 +166,9 @@ class AddBeneficiary extends StatelessWidget {
                       color: Colors.grey.shade700,
                       fontSize: 15,
                       fontFamily: "Poppings"),
+                ),
+                const SizedBox(
+                  height: 5,
                 ),
                 CustomTxtField(
                   hintText: "GOTV Decoder Number",

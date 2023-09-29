@@ -164,9 +164,18 @@ class ElectricityBillComplete extends StatelessWidget {
                           padding: const EdgeInsets.only(
                               right: 15, left: 15, top: 8, bottom: 8),
                           decoration: BoxDecoration(
-                            color: const Color(0xff009933),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
+                              color: const Color(0xff009933),
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black
+                                      .withOpacity(0.15), // Shadow color
+                                  offset: const Offset(
+                                      3, 3), // Shadow position (X, Y)
+                                  blurRadius: 3, // Blur radius
+                                  spreadRadius: 0, // Spread radius
+                                ),
+                              ]),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -258,10 +267,20 @@ class ElectricityBillComplete extends StatelessWidget {
                   Container(
                     height: 67.5,
                     decoration: BoxDecoration(
-                      border: Border.all(
-                          color: const Color(0xffBFD7DE), width: 1.2),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                        color: Colors.white,
+                        border: Border.all(
+                            color: const Color(0xffBFD7DE), width: 1.2),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color:
+                                Colors.black.withOpacity(0.15), // Shadow color
+                            offset:
+                                const Offset(3, 3), // Shadow position (X, Y)
+                            blurRadius: 3, // Blur radius
+                            spreadRadius: 0, // Spread radius
+                          ),
+                        ]),
                     padding: const EdgeInsets.symmetric(
                         horizontal: 15, vertical: 10),
                     child: Row(
@@ -394,9 +413,19 @@ class ElectricityBillComplete extends StatelessWidget {
                     child: Container(
                       height: 50,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: const Color(0xff026F2E)),
-                      ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: const Color(0xff026F2E)),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black
+                                  .withOpacity(0.15), // Shadow color
+                              offset:
+                                  const Offset(3, 3), // Shadow position (X, Y)
+                              blurRadius: 3, // Blur radius
+                              spreadRadius: 0, // Spread radius
+                            ),
+                          ]),
                       child: const Center(
                         child: Text(
                           "Go Home",

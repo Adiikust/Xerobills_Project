@@ -11,7 +11,7 @@ class NotificationPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(top: 10, right: 25, left: 25),
+          padding: const EdgeInsets.only(top: 17, right: 25, left: 25),
           child: Stack(
             alignment: Alignment.center,
             children: [
@@ -25,6 +25,7 @@ class NotificationPage extends StatelessWidget {
                       style: TextStyle(
                           fontFamily: "Poppins",
                           fontSize: 20,
+                          fontWeight: FontWeight.w500,
                           color: Color(0xff026F2E)),
                     ),
                     GestureDetector(
@@ -35,8 +36,11 @@ class NotificationPage extends StatelessWidget {
                           color: Colors.transparent,
                           padding: const EdgeInsets.only(
                               top: 10, left: 10, bottom: 10, right: 2),
-                          child:
-                              SvgPicture.asset("assets/media/svg/cancel.svg")),
+                          child: SvgPicture.asset(
+                            "assets/media/svg/cancel.svg",
+                            height: 24,
+                            width: 24,
+                          )),
                     ),
                   ],
                 ),
@@ -51,17 +55,20 @@ class NotificationPage extends StatelessWidget {
                       height: 20.h,
                       width: 20.h,
                     ),
+                    const SizedBox(height: 12),
                     const Text(
                       "Stay in the know !",
                       style: TextStyle(
                           color: Color(0xff003333),
                           fontSize: 22,
+                          fontWeight: FontWeight.w600,
                           fontFamily: "Poppins"),
                     ),
                     const Text(
                       "Check back later for transaction alerts,",
                       style: TextStyle(
                           color: Color(0xff003333),
+                          fontWeight: FontWeight.w400,
                           fontSize: 14,
                           fontFamily: "Poppins"),
                     ),
@@ -70,6 +77,7 @@ class NotificationPage extends StatelessWidget {
                       style: TextStyle(
                           color: Color(0xff003333),
                           fontSize: 14,
+                          fontWeight: FontWeight.w400,
                           fontFamily: "Poppins"),
                     ),
                     const Text(
@@ -77,6 +85,7 @@ class NotificationPage extends StatelessWidget {
                       style: TextStyle(
                           color: Color(0xff003333),
                           fontSize: 14,
+                          fontWeight: FontWeight.w400,
                           fontFamily: "Poppins"),
                     ),
                   ],

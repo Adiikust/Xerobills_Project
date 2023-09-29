@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:xerobills/widgets/rich_text_two.dart';
 
 class RecurringPayments extends StatelessWidget {
   const RecurringPayments({super.key});
@@ -28,13 +29,9 @@ class RecurringPayments extends StatelessWidget {
                           child: SvgPicture.asset(
                               "assets/media/svg/arrowleft.svg")),
                     ),
-                    const Text(
-                      "Recurring Payments",
-                      style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontWeight: FontWeight.w500,
-                          fontSize: 20,
-                          color: Color(0xff026F2E)),
+                    CustomRichTextTwo(
+                      firstText: "Recurring",
+                      secondText: "Payments",
                     ),
                     Container(
                       width: 30,
@@ -123,6 +120,7 @@ class RecurringPayments extends StatelessWidget {
                                   fontSize: 16,
                                   fontWeight: FontWeight.w600),
                             ),
+                            SizedBox(height: 4),
                             Text(
                               """You currently don't have any Inactive recurring""",
                               style: TextStyle(

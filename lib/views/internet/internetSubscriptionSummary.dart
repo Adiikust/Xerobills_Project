@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:xerobills/controllers/paymentMethodController.dart';
 import 'package:xerobills/views/internet/internetSubscriptionComplete.dart';
+import 'package:xerobills/widgets/rich_text.dart';
 
 class InternetSubscriptionSummary extends StatelessWidget {
   InternetSubscriptionSummary({super.key});
@@ -13,7 +14,7 @@ class InternetSubscriptionSummary extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 15),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Column(
@@ -33,12 +34,9 @@ class InternetSubscriptionSummary extends StatelessWidget {
                           child: SvgPicture.asset(
                               "assets/media/svg/arrowleft.svg")),
                     ),
-                    const Text(
-                      "Subscription Summary",
-                      style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 20,
-                          color: Color(0xff026F2E)),
+                    CustomRichText(
+                      firstText: "Subscription",
+                      secondText: "Summary",
                     ),
                     Container(
                       width: 30,
@@ -46,13 +44,14 @@ class InternetSubscriptionSummary extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 16,
                 ),
                 const Text(
                   "Review and confirm transaction",
                   style: TextStyle(
                       color: Color(0xff003333),
                       fontSize: 16,
+                      fontWeight: FontWeight.w400,
                       fontFamily: "Poppings"),
                 ),
                 const SizedBox(
@@ -64,7 +63,15 @@ class InternetSubscriptionSummary extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                       color: const Color(0xffBFD7DE),
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5), // Shadow color
+                          offset: const Offset(3, 3), // Shadow position (X, Y)
+                          blurRadius: 3, // Blur radius
+                          spreadRadius: 0, // Spread radius
+                        ),
+                      ]),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -118,15 +125,23 @@ class InternetSubscriptionSummary extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 18,
                 ),
                 Container(
                   height: 25.h,
                   decoration: BoxDecoration(
-                    border:
-                        Border.all(color: const Color(0xff026F2E), width: 1),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+                      color: Colors.white,
+                      border:
+                          Border.all(color: const Color(0xff026F2E), width: 1),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5), // Shadow color
+                          offset: const Offset(3, 3), // Shadow position (X, Y)
+                          blurRadius: 3, // Blur radius
+                          spreadRadius: 0, // Spread radius
+                        ),
+                      ]),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   child: Column(
@@ -318,9 +333,15 @@ class InternetSubscriptionSummary extends StatelessWidget {
                                   ),
                                   controller.select == true
                                       ? SvgPicture.asset(
-                                          "assets/media/svg/selected.svg")
+                                          "assets/media/svg/selected.svg",
+                                          height: 20,
+                                          width: 20,
+                                        )
                                       : SvgPicture.asset(
-                                          "assets/media/svg/select.svg"),
+                                          "assets/media/svg/select.svg",
+                                          height: 20,
+                                          width: 20,
+                                        ),
                                 ],
                               ),
                             ],
@@ -371,9 +392,15 @@ class InternetSubscriptionSummary extends StatelessWidget {
                                   ),
                                   controller.selected == true
                                       ? SvgPicture.asset(
-                                          "assets/media/svg/selected.svg")
+                                          "assets/media/svg/selected.svg",
+                                          height: 20,
+                                          width: 20,
+                                        )
                                       : SvgPicture.asset(
-                                          "assets/media/svg/select.svg"),
+                                          "assets/media/svg/select.svg",
+                                          height: 20,
+                                          width: 20,
+                                        ),
                                 ],
                               ),
                             ],

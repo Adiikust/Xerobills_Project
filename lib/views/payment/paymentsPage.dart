@@ -13,25 +13,25 @@ class PaymentsPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: const Color(0xffF5F5F5),
         body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 15),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Get.back();
-                    },
-                    child: Container(
-                        color: Colors.transparent,
-                        padding: const EdgeInsets.only(
-                            top: 10, left: 2, bottom: 10, right: 10),
-                        child:
-                            SvgPicture.asset("assets/media/svg/arrowleft.svg")),
-                  ),
-                  const Text(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  // GestureDetector(
+                  //   onTap: () {
+                  //     Get.back();
+                  //   },
+                  //   child: Container(
+                  //       color: Colors.transparent,
+                  //       padding: const EdgeInsets.only(
+                  //           top: 10, left: 2, bottom: 10, right: 10),
+                  //       child:
+                  //           SvgPicture.asset("assets/media/svg/arrowleft.svg")),
+                  // ),
+                  Text(
                     "Payments",
                     style: TextStyle(
                         fontFamily: "Poppins",
@@ -39,9 +39,9 @@ class PaymentsPage extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         color: Color(0xff026F2E)),
                   ),
-                  Container(
-                    width: 30,
-                  ),
+                  // Container(
+                  //   width: 30,
+                  // ),
                 ],
               ),
               const SizedBox(

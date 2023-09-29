@@ -5,17 +5,37 @@ import 'package:sizer/sizer.dart';
 import 'package:xerobills/controllers/dropDownController.dart';
 import 'package:xerobills/controllers/paymentMethodController.dart';
 import 'package:xerobills/views/electricity/electricityBillSummary.dart';
+import 'package:xerobills/widgets/drop_down_widget_two.dart';
+import 'package:xerobills/widgets/rich_text_two.dart';
 
-class ElectricityBIllDefault extends StatelessWidget {
+class ElectricityBIllDefault extends StatefulWidget {
   ElectricityBIllDefault({super.key});
+
+  @override
+  State<ElectricityBIllDefault> createState() => _ElectricityBIllDefaultState();
+}
+
+class _ElectricityBIllDefaultState extends State<ElectricityBIllDefault> {
   final PaymentMethodController controller = Get.put(PaymentMethodController());
+
   final DropdownController dropdownController = Get.put(DropdownController());
+
+  List<String> distroList = [
+    "Prepaid 1",
+    "Prepaid 2",
+    "Prepaid 3",
+    "Prepaid 4",
+    "Prepaid 5",
+  ];
+
+  String? _selectedDistro;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 15),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Column(
@@ -35,13 +55,9 @@ class ElectricityBIllDefault extends StatelessWidget {
                           child: SvgPicture.asset(
                               "assets/media/svg/arrowleft.svg")),
                     ),
-                    const Text(
-                      "Electricity Bill",
-                      style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          color: Color(0xff026F2E)),
+                    CustomRichTextTwo(
+                      firstText: "Electricity",
+                      secondText: "Bill",
                     ),
                     Container(
                       width: 30,
@@ -63,7 +79,15 @@ class ElectricityBIllDefault extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
                       color: const Color(0xffBFD7DE),
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5), // Shadow color
+                          offset: const Offset(3, 3), // Shadow position (X, Y)
+                          blurRadius: 3, // Blur radius
+                          spreadRadius: 0, // Spread radius
+                        ),
+                      ]),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -116,38 +140,36 @@ class ElectricityBIllDefault extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 24,
                 ),
-                Container(
-                  height: 45,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: const Color(0xff026F2E)),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        "Prepaid",
-                        style: TextStyle(
-                            color: Color(0xff003333),
-                            fontSize: 15,
-                            fontFamily: "Poppings"),
-                      ),
-                      SvgPicture.asset("assets/media/svg/vector-2.svg")
-                    ],
-                  ),
+                ReusableDropdownContainerTwo(
+                  itemList: distroList, // Your list of items
+                  selectedValue: _selectedDistro, // The selected value
+                  onChanged: (newValue) {
+                    setState(() {
+                      _selectedDistro = newValue;
+                      print("Gender ${_selectedDistro.toString()}");
+                    });
+                  },
+                  hintText: "Select", // The hint text
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 9,
                 ),
                 Container(
                   height: 45,
                   decoration: BoxDecoration(
-                    border: Border.all(color: const Color(0xff026F2E)),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+                      color: Colors.white,
+                      border: Border.all(color: const Color(0xff026F2E)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5), // Shadow color
+                          offset: const Offset(3, 3), // Shadow position (X, Y)
+                          blurRadius: 3, // Blur radius
+                          spreadRadius: 0, // Spread radius
+                        ),
+                      ]),
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -163,16 +185,24 @@ class ElectricityBIllDefault extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 9,
                 ),
                 Container(
                   height: 45,
                   decoration: BoxDecoration(
-                    border: Border.all(
-                      color: const Color(0xff026F2E),
-                    ),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+                      color: Colors.white,
+                      border: Border.all(
+                        color: const Color(0xff026F2E),
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5), // Shadow color
+                          offset: const Offset(3, 3), // Shadow position (X, Y)
+                          blurRadius: 3, // Blur radius
+                          spreadRadius: 0, // Spread radius
+                        ),
+                      ]),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

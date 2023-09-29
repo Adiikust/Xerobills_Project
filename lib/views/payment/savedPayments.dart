@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:xerobills/widgets/rich_text_two.dart';
 
 class SavedPayments extends StatelessWidget {
   const SavedPayments({super.key});
@@ -27,13 +28,9 @@ class SavedPayments extends StatelessWidget {
                       child: SvgPicture.asset("assets/media/svg/arrowleft.svg"),
                     ),
                   ),
-                  const Text(
-                    "Saved Payments",
-                    style: TextStyle(
-                        fontFamily: "Poppins",
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xff026F2E)),
+                  CustomRichTextTwo(
+                    firstText: "Saved",
+                    secondText: "Payments",
                   ),
                   Container(
                     width: 30,
@@ -54,6 +51,7 @@ class SavedPayments extends StatelessWidget {
                         fontSize: 16,
                         fontWeight: FontWeight.w600),
                   ),
+                  SizedBox(height: 4),
                   Text(
                     """You haven't saved any payment yet. When""",
                     style: TextStyle(

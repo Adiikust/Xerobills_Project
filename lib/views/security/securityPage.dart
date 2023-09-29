@@ -13,7 +13,7 @@ class SecurityPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Column(
@@ -61,15 +61,22 @@ class SecurityPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 32,
                 ),
                 Container(
-                  // margin: const EdgeInsets.symmetric(vertical: 5),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   decoration: BoxDecoration(
                       color: const Color(0xffBFD7DE),
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5), // Shadow color
+                          offset: const Offset(3, 3), // Shadow position (X, Y)
+                          blurRadius: 3, // Blur radius
+                          spreadRadius: 0, // Spread radius
+                        ),
+                      ]),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -135,6 +142,9 @@ class SecurityPage extends StatelessWidget {
                       fontSize: 15,
                       fontFamily: "Poppings"),
                 ),
+                const SizedBox(
+                  height: 5,
+                ),
                 CustomTxtField(
                   hintText: "Confirm New Password",
                   obscureText: true,
@@ -143,6 +153,9 @@ class SecurityPage extends StatelessWidget {
                       color: Colors.grey.shade700,
                       fontSize: 15,
                       fontFamily: "Poppings"),
+                ),
+                const SizedBox(
+                  height: 5,
                 ),
                 CustomTxtField(
                   hintText: "Enter Existing Password",

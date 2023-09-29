@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:xerobills/views/cable/cableSubscriptionComplete.dart';
+import 'package:xerobills/widgets/rich_text_two.dart';
 
 class CableSubscriptionSummary extends StatelessWidget {
   const CableSubscriptionSummary({super.key});
@@ -12,7 +13,7 @@ class CableSubscriptionSummary extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 15),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -30,13 +31,9 @@ class CableSubscriptionSummary extends StatelessWidget {
                         child:
                             SvgPicture.asset("assets/media/svg/arrowleft.svg")),
                   ),
-                  const Text(
-                    "Cable Subscription",
-                    style: TextStyle(
-                        fontFamily: "Poppins",
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xff026F2E)),
+                  CustomRichTextTwo(
+                    firstText: "Cable",
+                    secondText: "Subscription",
                   ),
                   Container(
                     width: 30,

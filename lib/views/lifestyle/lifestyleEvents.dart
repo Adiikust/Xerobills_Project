@@ -10,7 +10,7 @@ class LifeStyleEvents extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
           child: Column(
             children: [
               Row(
@@ -23,7 +23,8 @@ class LifeStyleEvents extends StatelessWidget {
                         color: Colors.transparent,
                         padding: const EdgeInsets.only(
                             top: 10, left: 2, bottom: 10, right: 10),
-                        child: SvgPicture.asset("assets/media/svg/arrowleft.svg")),
+                        child:
+                            SvgPicture.asset("assets/media/svg/arrowleft.svg")),
                   ),
                 ],
               ),
@@ -52,6 +53,14 @@ class LifeStyleEvents extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 70,
+              ),
+              Image.asset(
+                "assets/media/coming_soon.png",
+                height: 218,
+                width: 300,
+              )
             ],
           ),
         ),

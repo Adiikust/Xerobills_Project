@@ -5,17 +5,36 @@ import 'package:sizer/sizer.dart';
 import 'package:xerobills/controllers/dropDownController.dart';
 import 'package:xerobills/controllers/paymentMethodController.dart';
 import 'package:xerobills/views/cable/cableSubscriptionSummary.dart';
+import 'package:xerobills/widgets/drop_down_widget_two.dart';
+import 'package:xerobills/widgets/rich_text_two.dart';
 
-class CableSubscriptionDefault extends StatelessWidget {
+class CableSubscriptionDefault extends StatefulWidget {
   CableSubscriptionDefault({super.key});
+
+  @override
+  State<CableSubscriptionDefault> createState() =>
+      _CableSubscriptionDefaultState();
+}
+
+class _CableSubscriptionDefaultState extends State<CableSubscriptionDefault> {
   final PaymentMethodController controller = Get.put(PaymentMethodController());
+
   final DropdownController dropdownController = Get.put(DropdownController());
+  List<String> dailyBundlesList = [
+    "Yanga 1",
+    "Yanga 2",
+    "Yanga 3",
+    "Yanga 4",
+    "Yanga 5",
+  ];
+
+  String? _selectedDailyBundles;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 15),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Column(
@@ -35,13 +54,9 @@ class CableSubscriptionDefault extends StatelessWidget {
                           child: SvgPicture.asset(
                               "assets/media/svg/arrowleft.svg")),
                     ),
-                    const Text(
-                      "Cable Subscription",
-                      style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          color: Color(0xff026F2E)),
+                    CustomRichTextTwo(
+                      firstText: "Cable",
+                      secondText: "Subscription",
                     ),
                     Container(
                       width: 30,
@@ -136,35 +151,16 @@ class CableSubscriptionDefault extends StatelessWidget {
                 const SizedBox(
                   height: 29,
                 ),
-                Container(
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(color: const Color(0xff026F2E)),
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5), // Shadow color
-                        offset: const Offset(3, 3), // Shadow position (X, Y)
-                        blurRadius: 3, // Blur radius
-                        spreadRadius: 0, // Spread radius
-                      ),
-                    ],
-                  ),
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        "Yanga",
-                        style: TextStyle(
-                            color: Color(0xff003333),
-                            fontSize: 15,
-                            fontFamily: "Poppings"),
-                      ),
-                      SvgPicture.asset("assets/media/svg/vector-2.svg")
-                    ],
-                  ),
+                ReusableDropdownContainerTwo(
+                  itemList: dailyBundlesList, // Your list of items
+                  selectedValue: _selectedDailyBundles, // The selected value
+                  onChanged: (newValue) {
+                    setState(() {
+                      _selectedDailyBundles = newValue;
+                      print("Gender ${_selectedDailyBundles.toString()}");
+                    });
+                  },
+                  hintText: "Yanga", // The hint text
                 ),
                 const SizedBox(
                   height: 11,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 
 import '../../widgets/tiles/transactionTile.dart';
 
@@ -14,24 +13,24 @@ class TransactionPage extends StatelessWidget {
         length: 3,
         child: Scaffold(
           body: Padding(
-            padding: const EdgeInsets.only(right: 20, left: 20, top: 15),
+            padding: const EdgeInsets.only(right: 20, left: 20, top: 17),
             child: Column(
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Get.back();
-                      },
-                      child: Container(
-                          color: Colors.transparent,
-                          padding: const EdgeInsets.only(
-                              top: 10, left: 2, bottom: 10, right: 10),
-                          child: SvgPicture.asset(
-                              "assets/media/svg/arrowleft.svg")),
-                    ),
-                    const Text(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    // GestureDetector(
+                    //   onTap: () {
+                    //     Get.back();
+                    //   },
+                    //   child: Container(
+                    //       color: Colors.transparent,
+                    //       padding: const EdgeInsets.only(
+                    //           top: 10, left: 2, bottom: 10, right: 10),
+                    //       child: SvgPicture.asset(
+                    //           "assets/media/svg/arrowleft.svg")),
+                    // ),
+                    Text(
                       "Transactions",
                       style: TextStyle(
                           fontFamily: "Poppins",
@@ -39,13 +38,13 @@ class TransactionPage extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                           color: Color(0xff026F2E)),
                     ),
-                    Container(
-                      width: 30,
-                    ),
+                    // Container(
+                    //   width: 30,
+                    // ),
                   ],
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 22,
                 ),
                 Row(
                   children: [
