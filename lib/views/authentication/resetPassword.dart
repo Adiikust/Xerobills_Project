@@ -57,12 +57,11 @@ class ResetPassword extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "Reset Password",
                         style: TextStyle(
-                            letterSpacing: 0.5,
-                            color: const Color(0xff003333),
-                            fontSize: 3.h,
+                            color: Color(0xff003333),
+                            fontSize: 24,
                             fontWeight: FontWeight.w600,
                             fontFamily: "Poppings"),
                       ),
@@ -96,15 +95,17 @@ class ResetPassword extends StatelessWidget {
                           elevation: 4,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
-                          fixedSize: const Size(286, 53),
+                          fixedSize: const Size(286, 50),
                           backgroundColor: const Color(0xff026F2E)),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.back();
+                      },
                       child: const Text(
                         "Reset",
                         style: TextStyle(fontSize: 16, fontFamily: "Poppins"),
                       )),
-                  SizedBox(
-                    height: 1.h,
+                  const SizedBox(
+                    height: 30,
                   ),
                   const Divider(
                     indent: 10,

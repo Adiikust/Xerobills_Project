@@ -11,7 +11,7 @@ class RecurringPayments extends StatelessWidget {
         length: 2,
         child: Scaffold(
           body: Padding(
-            padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
+            padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
             child: Column(
               children: [
                 Row(
@@ -32,6 +32,7 @@ class RecurringPayments extends StatelessWidget {
                       "Recurring Payments",
                       style: TextStyle(
                           fontFamily: "Poppins",
+                          fontWeight: FontWeight.w500,
                           fontSize: 20,
                           color: Color(0xff026F2E)),
                     ),
@@ -41,7 +42,7 @@ class RecurringPayments extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 24,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -88,24 +89,25 @@ class RecurringPayments extends StatelessWidget {
                             Text(
                               "Oops! Nothing to see here",
                               style: TextStyle(
-                                color: Color(0xff003333),
-                                fontFamily: "Poppins",
-                                fontSize: 16,
-                              ),
+                                  color: Color(0xff003333),
+                                  fontFamily: "Poppins",
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600),
                             ),
                             Text(
                               """You currently don't have any Active recurring""",
                               style: TextStyle(
-                                color: Color(0xff026F2E),
-                                fontFamily: "Poppins",
-                                fontSize: 10,
-                              ),
+                                  color: Color(0xff026F2E),
+                                  fontFamily: "Poppins",
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w400),
                             ),
                             Text(
                               """ payment. When you do, they’ll show up here.""",
                               style: TextStyle(
                                 color: Color(0xff026F2E),
                                 fontFamily: "Poppins",
+                                fontWeight: FontWeight.w400,
                                 fontSize: 10,
                               ), // payment. When you do, they’ll show up here.
                             )
@@ -116,26 +118,28 @@ class RecurringPayments extends StatelessWidget {
                             Text(
                               "Oops! Nothing to see here",
                               style: TextStyle(
-                                color: Color(0xff003333),
-                                fontFamily: "Poppins",
-                                fontSize: 16,
-                              ),
+                                  color: Color(0xff003333),
+                                  fontFamily: "Poppins",
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600),
                             ),
                             Text(
                               """You currently don't have any Inactive recurring""",
                               style: TextStyle(
                                 color: Color(0xff026F2E),
                                 fontFamily: "Poppins",
+                                fontWeight: FontWeight.w400,
                                 fontSize: 10,
                               ),
                             ),
                             Text(
                               """ payment. When you do, they’ll show up here.""",
                               style: TextStyle(
-                                color: Color(0xff026F2E),
-                                fontFamily: "Poppins",
-                                fontSize: 10,
-                              ), // payment. When you do, they’ll show up here.
+                                  color: Color(0xff026F2E),
+                                  fontFamily: "Poppins",
+                                  fontSize: 10,
+                                  fontWeight: FontWeight
+                                      .w400), // payment. When you do, they’ll show up here.
                             )
                           ]),
                     ],

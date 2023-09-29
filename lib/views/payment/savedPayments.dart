@@ -10,7 +10,7 @@ class SavedPayments extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 17),
           child: Column(
             children: [
               Row(
@@ -32,6 +32,7 @@ class SavedPayments extends StatelessWidget {
                     style: TextStyle(
                         fontFamily: "Poppins",
                         fontSize: 20,
+                        fontWeight: FontWeight.w500,
                         color: Color(0xff026F2E)),
                   ),
                   Container(
@@ -40,7 +41,7 @@ class SavedPayments extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: 20,
+                height: 24,
               ),
               const Spacer(),
               Center(
@@ -48,26 +49,27 @@ class SavedPayments extends StatelessWidget {
                   Text(
                     "Oops! Nothing to see here",
                     style: TextStyle(
-                      color: Color(0xff003333),
-                      fontFamily: "Poppins",
-                      fontSize: 16,
-                    ),
+                        color: Color(0xff003333),
+                        fontFamily: "Poppins",
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600),
                   ),
                   Text(
                     """You haven't saved any payment yet. When""",
                     style: TextStyle(
-                      color: Color(0xff026F2E),
-                      fontFamily: "Poppins",
-                      fontSize: 10,
-                    ),
+                        color: Color(0xff026F2E),
+                        fontFamily: "Poppins",
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400),
                   ),
                   Text(
                     """ you do, they’ll show up here.""",
                     style: TextStyle(
-                      color: Color(0xff026F2E),
-                      fontFamily: "Poppins",
-                      fontSize: 10,
-                    ), // payment. When you do, they’ll show up here.
+                        color: Color(0xff026F2E),
+                        fontFamily: "Poppins",
+                        fontSize: 10,
+                        fontWeight: FontWeight
+                            .w400), // payment. When you do, they’ll show up here.
                   )
                 ]),
               ),

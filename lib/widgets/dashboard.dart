@@ -37,7 +37,7 @@ class DashBoard extends GetView<DrawersController> {
             onPressed: () {
               Get.to(
                 () => ManageProfiles(),
-                // transition: Transition.zoom
+                //transition: Transition.zoom
               );
             },
             backgroundColor: const Color(0xff2FB73B),
@@ -103,8 +103,8 @@ class DashBoard extends GetView<DrawersController> {
 
                         //transactions
                         GestureDetector(
-                          // onTap: () => _controller.changePage(1),
-                          onTap: () => Get.to(() => const TransactionPage()),
+                          onTap: () => _controller.changePage(1),
+                          //onTap: () => Get.to(() => const TransactionPage()),
                           child: Container(
                             color: Colors.transparent,
                             padding: const EdgeInsets.only(
@@ -136,14 +136,15 @@ class DashBoard extends GetView<DrawersController> {
                             ),
                           ),
                         ),
+
                         const SizedBox(
                           width: 20,
                         ),
 
                         //payments
                         GestureDetector(
-                          // onTap: () => _controller.changePage(2),
-                          onTap: () => Get.to(() => const PaymentsPage()),
+                          onTap: () => _controller.changePage(2),
+                          //onTap: () => Get.to(() => const PaymentsPage()),
                           child: Container(
                             color: Colors.transparent,
                             padding: const EdgeInsets.only(
@@ -178,8 +179,8 @@ class DashBoard extends GetView<DrawersController> {
 
                         //lifestyle
                         GestureDetector(
-                          //onTap: () => _controller.changePage(3),
-                          onTap: () => Get.to(() => LifestylePage()),
+                          onTap: () => _controller.changePage(3),
+                          //onTap: () => Get.to(() => LifestylePage()),
                           child: Container(
                             color: Colors.transparent,
                             padding: const EdgeInsets.only(

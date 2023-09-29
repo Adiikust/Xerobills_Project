@@ -19,7 +19,7 @@ class CreateAccount extends StatelessWidget {
           backgroundColor: Colors.transparent,
           body: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.only(left: 29, right: 20),
+              padding: const EdgeInsets.only(left: 29, right: 20, top: 17),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -60,12 +60,12 @@ class CreateAccount extends StatelessWidget {
                   SizedBox(
                     height: 5.h,
                   ),
-                  Text(
+                  const Text(
                     "Create Account",
                     style: TextStyle(
-                        color: const Color(0xff003333),
-                        fontSize: 3.h,
-                        fontWeight: FontWeight.w600,
+                        color: Color(0xff003333),
+                        fontSize: 24,
+                        fontWeight: FontWeight.w500,
                         fontFamily: "Poppings"),
                   ),
                   const Text(
@@ -86,7 +86,6 @@ class CreateAccount extends StatelessWidget {
                     hintStyle: TextStyle(
                         color: Colors.grey.shade700,
                         fontSize: 15,
-                        letterSpacing: 0.5,
                         fontFamily: "Poppings"),
                   ),
                   CustomTxtField(
@@ -96,7 +95,7 @@ class CreateAccount extends StatelessWidget {
                     hintStyle: TextStyle(
                         color: Colors.grey.shade700,
                         fontSize: 15,
-                        letterSpacing: 0.5,
+                        fontWeight: FontWeight.w400,
                         fontFamily: "Poppings"),
                   ),
                   CustomTxtField(
@@ -106,7 +105,6 @@ class CreateAccount extends StatelessWidget {
                     hintStyle: TextStyle(
                         color: Colors.grey.shade700,
                         fontSize: 15,
-                        letterSpacing: 0.5,
                         fontFamily: "Poppings"),
                   ),
                   CustomTxtField(
@@ -116,7 +114,6 @@ class CreateAccount extends StatelessWidget {
                     hintStyle: TextStyle(
                         color: Colors.grey.shade700,
                         fontSize: 15,
-                        letterSpacing: 0.5,
                         fontFamily: "Poppings"),
                   ),
                   CustomTxtField(
@@ -126,7 +123,6 @@ class CreateAccount extends StatelessWidget {
                     hintStyle: TextStyle(
                         color: Colors.grey.shade700,
                         fontSize: 15,
-                        letterSpacing: 0.5,
                         fontFamily: "Poppings"),
                   ),
                   CustomTxtField(
@@ -136,7 +132,6 @@ class CreateAccount extends StatelessWidget {
                     hintStyle: TextStyle(
                         color: Colors.grey.shade700,
                         fontSize: 15,
-                        letterSpacing: 0.5,
                         fontFamily: "Poppings"),
                   ),
                   SizedBox(
@@ -148,7 +143,7 @@ class CreateAccount extends StatelessWidget {
                           elevation: 4,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
-                          fixedSize: const Size(270, 53),
+                          fixedSize: const Size(270, 50),
                           backgroundColor: const Color(0xff026F2E)),
                       onPressed: () {
                         Get.to(() => const VerifyEmailPage());
@@ -177,7 +172,6 @@ class CreateAccount extends StatelessWidget {
                       child: const Text(
                         "Log In",
                         style: TextStyle(
-                            letterSpacing: 0.5,
                             color: Color(0xff026F2E),
                             fontSize: 17,
                             fontFamily: "Poppings"),

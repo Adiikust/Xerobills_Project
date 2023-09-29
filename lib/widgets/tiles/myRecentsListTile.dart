@@ -19,18 +19,17 @@ class MyRecentsListTile extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10),
-        height: 80,
+        height: 70,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(15),
-          boxShadow:  [
+          boxShadow: [
             BoxShadow(
-              color: Colors.grey.shade400,
-              blurRadius: 5,
-              spreadRadius: 2,
-              offset: const Offset(0,4)
-            )
+                color: Colors.grey.shade400,
+                blurRadius: 5,
+                spreadRadius: 2,
+                offset: const Offset(0, 4))
           ],
         ),
         child: Row(
@@ -39,7 +38,7 @@ class MyRecentsListTile extends StatelessWidget {
             Row(
               children: [
                 CircleAvatar(
-                  radius: 30,
+                  radius: 20,
                   backgroundColor: Colors.transparent,
                   backgroundImage: AssetImage(imageUrl),
                 ),
@@ -54,6 +53,7 @@ class MyRecentsListTile extends StatelessWidget {
                       desc,
                       style: const TextStyle(
                           fontSize: 12,
+                          fontWeight: FontWeight.w400,
                           color: Color(0xff2FB73B),
                           fontFamily: "Poppins"),
                     ),
@@ -61,6 +61,7 @@ class MyRecentsListTile extends StatelessWidget {
                       "+234 812 704 6244",
                       style: TextStyle(
                           fontSize: 16,
+                          fontWeight: FontWeight.w500,
                           color: Color(0xff003333),
                           fontFamily: "Poppins"),
                     )
@@ -86,9 +87,8 @@ class MyRecentsListTile extends StatelessWidget {
                       " $amount",
                       style: const TextStyle(
                           color: Color(0xff003333),
-                          letterSpacing: 0.5,
                           fontSize: 14,
-                          fontWeight: FontWeight.w300,
+                          fontWeight: FontWeight.w500,
                           fontFamily: "Poppings"),
                     ),
                   ],
@@ -101,8 +101,3 @@ class MyRecentsListTile extends StatelessWidget {
     );
   }
 }
-
-//  ClipRRect(
-//                                     borderRadius: BorderRadius.circular(200),
-//                                     child: Image.asset("assets/images/MTN.png", height: 53,width: 53,),
-//                                   ),

@@ -69,7 +69,6 @@ class LoginPage extends StatelessWidget {
                         const Text(
                           "Manage Account",
                           style: TextStyle(
-                              letterSpacing: 0.5,
                               color: Color(0xff003333),
                               fontSize: 24,
                               fontWeight: FontWeight.w600,
@@ -114,6 +113,7 @@ class LoginPage extends StatelessWidget {
                             style: TextStyle(
                                 color: Color(0xff002911),
                                 fontSize: 15,
+                                fontWeight: FontWeight.w500,
                                 fontFamily: "Poppings"),
                           ),
                         ),

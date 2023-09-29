@@ -1,24 +1,23 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 
 // ignore: must_be_immutable, camel_case_types
 class quickActionButton extends StatelessWidget {
- quickActionButton({
-  required this.svgUrl,
-  required this.actionText,
-  required this.borderRadius,
-  required this.color,
-  this.onTap,
+  quickActionButton({
+    required this.svgUrl,
+    required this.actionText,
+    required this.borderRadius,
+    required this.color,
+    this.onTap,
     super.key,
   });
 
-String svgUrl;
-String actionText;
-BorderRadiusGeometry borderRadius;
-Color color;
-Function()? onTap;
+  String svgUrl;
+  String actionText;
+  BorderRadiusGeometry borderRadius;
+  Color color;
+  Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -43,14 +42,13 @@ Function()? onTap;
                   actionText,
                   style: const TextStyle(
                       color: Color(0xff026F2E),
-                      letterSpacing: 0.5,
+                      fontWeight: FontWeight.w500,
                       fontSize: 16,
                       fontFamily: "Poppings"),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(
-                    top: 15, bottom: 30, right: 8),
+                padding: const EdgeInsets.only(top: 15, bottom: 30, right: 8),
                 child: SvgPicture.asset(
                   svgUrl,
                   height: 30,

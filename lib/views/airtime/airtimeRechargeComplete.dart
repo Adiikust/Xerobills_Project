@@ -14,7 +14,7 @@ class AirtimeRechargeComplete extends StatelessWidget {
         body: Center(
           child: Padding(
             padding:
-                const EdgeInsets.only(top: 10, right: 25, left: 25, bottom: 15),
+                const EdgeInsets.only(top: 17, right: 25, left: 25, bottom: 15),
             child: SingleChildScrollView(
               physics: const BouncingScrollPhysics(),
               child: Column(

@@ -13,7 +13,7 @@ class PaymentsPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: const Color(0xffF5F5F5),
         body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -36,6 +36,7 @@ class PaymentsPage extends StatelessWidget {
                     style: TextStyle(
                         fontFamily: "Poppins",
                         fontSize: 20,
+                        fontWeight: FontWeight.w500,
                         color: Color(0xff026F2E)),
                   ),
                   Container(
@@ -44,7 +45,7 @@ class PaymentsPage extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: 20,
+                height: 24,
               ),
               Material(
                 borderRadius: const BorderRadius.only(
@@ -64,7 +65,8 @@ class PaymentsPage extends StatelessWidget {
                   onTap: () => Get.to(() => const RecurringPayments()),
                   child: Container(
                     height: 122,
-                    padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 16, horizontal: 16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -76,28 +78,36 @@ class PaymentsPage extends StatelessWidget {
                               style: TextStyle(
                                 fontFamily: "Poppins",
                                 fontSize: 20,
+                                fontWeight: FontWeight.w700,
                                 color: Color(0xff026F2E),
                               ),
+                            ),
+                            SizedBox(
+                              height: 3,
                             ),
                             Text(
                               "Manage your Recurring payments",
                               style: TextStyle(
                                 fontFamily: "Poppins",
                                 fontSize: 12,
+                                fontWeight: FontWeight.w400,
                                 color: Color(0xff003333),
                               ),
                             ),
                           ],
                         ),
                         SvgPicture.asset(
-                            "assets/media/svg/recurring-payments.svg"),
+                          "assets/media/svg/recurring-payments.svg",
+                          height: 80,
+                          width: 80,
+                        ),
                       ],
                     ),
                   ),
                 ),
               ),
               const SizedBox(
-                height: 25,
+                height: 21,
               ),
               Material(
                 borderRadius: const BorderRadius.only(
@@ -117,7 +127,8 @@ class PaymentsPage extends StatelessWidget {
                   onTap: () => Get.to(() => const SavedPayments()),
                   child: Container(
                     height: 122,
-                    padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 16, horizontal: 16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -129,8 +140,12 @@ class PaymentsPage extends StatelessWidget {
                               style: TextStyle(
                                 fontFamily: "Poppins",
                                 fontSize: 20,
+                                fontWeight: FontWeight.w700,
                                 color: Color(0xff026F2E),
                               ),
+                            ),
+                            SizedBox(
+                              height: 3,
                             ),
                             Text(
                               "Manage your Recurring payments",
