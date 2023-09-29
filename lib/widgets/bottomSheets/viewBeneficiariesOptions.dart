@@ -40,7 +40,7 @@ class ViewBeneficiary extends StatelessWidget {
                       const Text(
                         "Abdulhaqq Sule",
                         style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 20,
                             color: Colors.white,
                             fontFamily: "Poppins"),
                       ),
@@ -49,7 +49,10 @@ class ViewBeneficiary extends StatelessWidget {
                           Get.back();
                         },
                         child: SvgPicture.asset(
-                            "assets/media/svg/beneficiary-cancel.svg"),
+                          "assets/media/svg/beneficiary-cancel.svg",
+                          height: 26,
+                          width: 26,
+                        ),
                       )
                     ],
                   ),
@@ -58,7 +61,7 @@ class ViewBeneficiary extends StatelessWidget {
               const Text(
                 "Manage Profile",
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                   color: Colors.white,
                   fontFamily: "Poppins",
                 ),
@@ -66,7 +69,7 @@ class ViewBeneficiary extends StatelessWidget {
               const Text(
                 "Buy Airtime",
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                   color: Colors.white,
                   fontFamily: "Poppins",
                 ),
@@ -74,7 +77,7 @@ class ViewBeneficiary extends StatelessWidget {
               const Text(
                 "Buy Internet Data",
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                   color: Colors.white,
                   fontFamily: "Poppins",
                 ),
@@ -82,7 +85,7 @@ class ViewBeneficiary extends StatelessWidget {
               const Text(
                 "Buy Electricity",
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                   color: Colors.white,
                   fontFamily: "Poppins",
                 ),
@@ -90,7 +93,7 @@ class ViewBeneficiary extends StatelessWidget {
               const Text(
                 "Buy Cable Subscription",
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                   color: Colors.white,
                   fontFamily: "Poppins",
                 ),

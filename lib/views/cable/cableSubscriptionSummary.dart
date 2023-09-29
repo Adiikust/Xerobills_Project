@@ -5,14 +5,14 @@ import 'package:sizer/sizer.dart';
 import 'package:xerobills/views/cable/cableSubscriptionComplete.dart';
 
 class CableSubscriptionSummary extends StatelessWidget {
-  CableSubscriptionSummary({super.key});
+  const CableSubscriptionSummary({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.only(right: 25, left: 25, top: 10),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -25,12 +25,12 @@ class CableSubscriptionSummary extends StatelessWidget {
                     },
                     child: Container(
                         color: Colors.transparent,
-                        padding: EdgeInsets.only(
+                        padding: const EdgeInsets.only(
                             top: 10, left: 2, bottom: 10, right: 10),
                         child:
                             SvgPicture.asset("assets/media/svg/arrowleft.svg")),
                   ),
-                  Text(
+                  const Text(
                     "Cable Subscription",
                     style: TextStyle(
                         fontFamily: "Poppins",
@@ -42,10 +42,10 @@ class CableSubscriptionSummary extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 "Review and confirm transaction",
                 style: TextStyle(
                     color: Color(0xff003333),
@@ -54,10 +54,10 @@ class CableSubscriptionSummary extends StatelessWidget {
                     fontFamily: "Poppings"),
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 5),
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                margin: const EdgeInsets.symmetric(vertical: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(
-                    color: Color(0xffBFD7DE),
+                    color: const Color(0xffBFD7DE),
                     borderRadius: BorderRadius.circular(20)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -65,7 +65,7 @@ class CableSubscriptionSummary extends StatelessWidget {
                     Row(
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(top: 8.0, bottom: 0),
+                          padding: const EdgeInsets.only(top: 8.0, bottom: 0),
                           child: Image.asset(
                             "assets/media/default-avatar.png",
                             height: 60,
@@ -76,7 +76,7 @@ class CableSubscriptionSummary extends StatelessWidget {
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text(
                               "Bashir Momoh",
                               style: TextStyle(
@@ -99,7 +99,7 @@ class CableSubscriptionSummary extends StatelessWidget {
                       onTap: () {},
                       child: Padding(
                         padding:
-                            EdgeInsets.symmetric(horizontal: 8.0, vertical: 8),
+                            const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8),
                         child: SvgPicture.asset("assets/media/svg/green-x.svg"),
                       ),
                     ),
@@ -108,18 +108,18 @@ class CableSubscriptionSummary extends StatelessWidget {
               ),
               Container(
                 height: 25.h,
-                margin: EdgeInsets.only(top: 10),
+                margin: const EdgeInsets.only(top: 10),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Color(0xff026F2E), width: 1.2),
+                  border: Border.all(color: const Color(0xff026F2E), width: 1.2),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         Text(
                           "Cable Network",
                           style: TextStyle(
@@ -140,7 +140,7 @@ class CableSubscriptionSummary extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         Text(
                           "Plan",
                           style: TextStyle(
@@ -162,7 +162,7 @@ class CableSubscriptionSummary extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           "Amount",
                           style: TextStyle(
                               color: Color(0xff026F2E),
@@ -173,15 +173,15 @@ class CableSubscriptionSummary extends StatelessWidget {
                         Row(
                           children: [
                             Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 3.0),
+                              padding: const EdgeInsets.symmetric(horizontal: 3.0),
                               child: SvgPicture.asset(
                                 "assets/media/svg/naira.svg",
                                 // ignore: deprecated_member_use
-                                color: Color(0xff003333),
+                                color: const Color(0xff003333),
                                 height: 11,
                               ),
                             ),
-                            Text(
+                            const Text(
                               "3,500.00",
                               style: TextStyle(
                                   color: Color(0xff003333),
@@ -195,7 +195,7 @@ class CableSubscriptionSummary extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         Text(
                           "Payment Method",
                           style: TextStyle(
@@ -218,11 +218,11 @@ class CableSubscriptionSummary extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 20.0),
+                padding: const EdgeInsets.symmetric(vertical: 20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: Padding(
                         padding: EdgeInsets.only(right: 50.0),
                         child: Divider(
@@ -232,7 +232,7 @@ class CableSubscriptionSummary extends StatelessWidget {
                       ),
                     ),
                     SvgPicture.asset("assets/media/svg/lock.svg"),
-                    Expanded(
+                    const Expanded(
                       child: Padding(
                         padding: EdgeInsets.only(left: 50.0),
                         child: Divider(
@@ -250,11 +250,11 @@ class CableSubscriptionSummary extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
                     fixedSize: Size(55.5.w, 5.5.h),
-                    backgroundColor: Color(0xff026F2E)),
+                    backgroundColor: const Color(0xff026F2E)),
                 onPressed: () {
-                  Get.to(() => CableSubscriptionComplete());
+                  Get.to(() => const CableSubscriptionComplete());
                 },
-                child: Text(
+                child: const Text(
                   "Confirm Transaction",
                   style: TextStyle(fontSize: 16, fontFamily: "Poppins"),
                 ),

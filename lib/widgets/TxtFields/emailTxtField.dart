@@ -26,10 +26,10 @@ class emailTxtField extends StatelessWidget {
           decoration: InputDecoration(
             hintText: 'Email Address',
             hintStyle: TextStyle(
-                color: Colors.grey, letterSpacing: 0.5, fontFamily: "Poppings", fontSize: 15),
+                color: Colors.grey, fontFamily: "Poppings", fontSize: 15),
             contentPadding: EdgeInsets.only(left: 29, right: 5),
             focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(width: 1.5, color: Color(0xff026F2E)),
+              borderSide: BorderSide(width: 1, color: Color(0xff026F2E)),
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(8),
                   topRight: Radius.circular(18),
@@ -37,7 +37,7 @@ class emailTxtField extends StatelessWidget {
                   bottomRight: Radius.circular(8)),
             ),
             border: OutlineInputBorder(
-              borderSide: BorderSide(width: 1.5, color: Color(0xff026F2E)),
+              borderSide: BorderSide(width: 1, color: Color(0xff026F2E)),
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(8),
                   topRight: Radius.circular(18),
@@ -45,7 +45,7 @@ class emailTxtField extends StatelessWidget {
                   bottomRight: Radius.circular(8)),
             ),
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(width: 1.5, color: Color(0xff026F2E)),
+              borderSide: BorderSide(width: 1, color: Color(0xff026F2E)),
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(8),
                   topRight: Radius.circular(18),
@@ -53,7 +53,7 @@ class emailTxtField extends StatelessWidget {
                   bottomRight: Radius.circular(8)),
             ),
             disabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(width: 1.5, color: Color(0xff026F2E)),
+              borderSide: BorderSide(width: 1, color: Color(0xff026F2E)),
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(8),
                   topRight: Radius.circular(18),

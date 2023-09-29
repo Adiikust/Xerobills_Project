@@ -16,7 +16,7 @@ class DashBoard extends GetView<DrawersController> {
   final List<Widget> screens = [
     HomePage(),
     const TransactionPage(),
-    PaymentsPage(),
+    const PaymentsPage(),
     LifestylePage(),
   ];
 
@@ -143,7 +143,7 @@ class DashBoard extends GetView<DrawersController> {
                         //payments
                         GestureDetector(
                           // onTap: () => _controller.changePage(2),
-                          onTap: () => Get.to(() => PaymentsPage()),
+                          onTap: () => Get.to(() => const PaymentsPage()),
                           child: Container(
                             color: Colors.transparent,
                             padding: const EdgeInsets.only(

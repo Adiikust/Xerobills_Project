@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:sizer/sizer.dart';
 
 import '../../widgets/tiles/transactionTile.dart';
 
@@ -15,7 +14,7 @@ class TransactionPage extends StatelessWidget {
         length: 3,
         child: Scaffold(
           body: Padding(
-            padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
+            padding: const EdgeInsets.only(right: 20, left: 20, top: 15),
             child: Column(
               children: [
                 Row(
@@ -37,6 +36,7 @@ class TransactionPage extends StatelessWidget {
                       style: TextStyle(
                           fontFamily: "Poppins",
                           fontSize: 20,
+                          fontWeight: FontWeight.w500,
                           color: Color(0xff026F2E)),
                     ),
                     Container(
@@ -45,80 +45,75 @@ class TransactionPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 5, left: 5),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Padding(
-                          padding: EdgeInsets.only(top: 1.3.h),
-                          child: Material(
-                            elevation: 2,
-                            borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(8),
-                                topRight: Radius.circular(18),
-                                bottomLeft: Radius.circular(8),
-                                bottomRight: Radius.circular(8)),
-                            child: TextField(
-                              cursorColor: Colors.black,
-                              keyboardType: TextInputType.emailAddress,
-                              decoration: InputDecoration(
-                                suffixIconColor: Colors.grey.shade700,
-                                suffixIconConstraints: const BoxConstraints(
-                                    maxWidth: 20, maxHeight: 20),
-                                hintText: "Search for a transaction",
-                                hintStyle: TextStyle(
-                                    color: Colors.grey.shade700,
-                                    fontSize: 14,
-                                    letterSpacing: 0.5,
-                                    fontFamily: "Poppings"),
-                                contentPadding:
-                                    const EdgeInsets.only(left: 29, right: 5),
-                                focusedBorder: const OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      width: 1.5, color: Color(0xff026F2E)),
-                                  borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(10),
-                                      topRight: Radius.circular(10),
-                                      bottomLeft: Radius.circular(10),
-                                      bottomRight: Radius.circular(10)),
-                                ),
-                                enabledBorder: const OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      width: 1.5, color: Color(0xff026F2E)),
-                                  borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(10),
-                                      topRight: Radius.circular(10),
-                                      bottomLeft: Radius.circular(10),
-                                      bottomRight: Radius.circular(10)),
-                                ),
-                                filled: true,
-                                fillColor: Colors.white,
-                              ),
-                              style: const TextStyle(
-                                fontSize: 15,
-                                color: Color(0xff000000),
-                              ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Material(
+                        elevation: 2,
+                        borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(8),
+                            topRight: Radius.circular(18),
+                            bottomLeft: Radius.circular(8),
+                            bottomRight: Radius.circular(8)),
+                        child: TextField(
+                          cursorColor: Colors.black,
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: InputDecoration(
+                            suffixIconColor: Colors.grey.shade700,
+                            suffixIconConstraints: const BoxConstraints(
+                                maxWidth: 20, maxHeight: 20),
+                            hintText: "Search for a transaction",
+                            hintStyle: TextStyle(
+                                color: Colors.grey.shade700,
+                                fontSize: 14,
+                                fontFamily: "Poppings"),
+                            contentPadding:
+                                const EdgeInsets.only(left: 29, right: 5),
+                            focusedBorder: const OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  width: 1, color: Color(0xff026F2E)),
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(10),
+                                  bottomLeft: Radius.circular(10),
+                                  bottomRight: Radius.circular(10)),
                             ),
+                            enabledBorder: const OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  width: 1, color: Color(0xff026F2E)),
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  topRight: Radius.circular(10),
+                                  bottomLeft: Radius.circular(10),
+                                  bottomRight: Radius.circular(10)),
+                            ),
+                            filled: true,
+                            fillColor: Colors.white,
+                          ),
+                          style: const TextStyle(
+                            fontSize: 15,
+                            color: Color(0xff000000),
                           ),
                         ),
                       ),
-                      GestureDetector(
-                        //go to filter page
-                        onTap: (){},
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 15.0, top: 7),
-                          child: SvgPicture.asset(
-                              "assets/media/svg/transaction-filter.svg"),
+                    ),
+                    GestureDetector(
+                      onTap: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15.0, top: 7),
+                        child: SvgPicture.asset(
+                          "assets/media/svg/transaction-filter.svg",
+                          height: 23,
+                          width: 23,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 Container(
-                  height: 50,
+                  height: 45,
                   margin: const EdgeInsets.symmetric(vertical: 10),
                   padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
@@ -164,7 +159,7 @@ class TransactionPage extends StatelessWidget {
                     children: [
                       ListView.builder(
                         physics: const BouncingScrollPhysics(),
-                        itemCount: 3,
+                        itemCount: 10,
                         itemBuilder: (context, index) {
                           return TransactionListTile(
                             imageUrl: "assets/media/providers/mtn.png",
@@ -177,7 +172,7 @@ class TransactionPage extends StatelessWidget {
                       ),
                       ListView.builder(
                         physics: const BouncingScrollPhysics(),
-                        itemCount: 3,
+                        itemCount: 10,
                         itemBuilder: (context, index) {
                           return TransactionListTile(
                             imageUrl: "assets/media/providers/mtn.png",
@@ -190,7 +185,7 @@ class TransactionPage extends StatelessWidget {
                       ),
                       ListView.builder(
                         physics: const BouncingScrollPhysics(),
-                        itemCount: 3,
+                        itemCount: 10,
                         itemBuilder: (context, index) {
                           return TransactionListTile(
                             imageUrl: "assets/media/providers/mtn.png",

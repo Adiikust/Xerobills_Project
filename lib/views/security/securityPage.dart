@@ -37,6 +37,7 @@ class SecurityPage extends StatelessWidget {
                       style: TextStyle(
                           fontFamily: "Poppins",
                           fontSize: 20,
+                          fontWeight: FontWeight.bold,
                           color: Color(0xff026F2E)),
                     ),
                     GestureDetector(
@@ -50,7 +51,11 @@ class SecurityPage extends StatelessWidget {
                           left: 10,
                           bottom: 10,
                         ),
-                        child: SvgPicture.asset("assets/media/svg/cancel.svg"),
+                        child: SvgPicture.asset(
+                          "assets/media/svg/cancel.svg",
+                          width: 24,
+                          height: 24,
+                        ),
                       ),
                     ),
                   ],
@@ -59,12 +64,12 @@ class SecurityPage extends StatelessWidget {
                   height: 20,
                 ),
                 Container(
-                  margin: const EdgeInsets.symmetric(vertical: 5),
+                  // margin: const EdgeInsets.symmetric(vertical: 5),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   decoration: BoxDecoration(
                       color: const Color(0xffBFD7DE),
-                      borderRadius: BorderRadius.circular(20)),
+                      borderRadius: BorderRadius.circular(10)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -74,16 +79,15 @@ class SecurityPage extends StatelessWidget {
                             padding: const EdgeInsets.only(top: 6.0, bottom: 0),
                             child: Image.asset(
                               "assets/media/default-avatar-md.png",
-                              height: 65,
+                              height: 50,
                               scale: 0.5,
                               width: 65,
                             ),
                           ),
-                          const SizedBox(width: 4),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
+                            children: const [
                               SizedBox(
                                 height: 23,
                                 child: Text(
@@ -108,14 +112,19 @@ class SecurityPage extends StatelessWidget {
                       GestureDetector(
                         onTap: () {},
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 8.0, vertical: 8),
-                          child:
-                              SvgPicture.asset("assets/media/svg/dropleft.svg"),
+                          padding: const EdgeInsets.symmetric(vertical: 8),
+                          child: SvgPicture.asset(
+                            "assets/media/svg/dropleft.svg",
+                            height: 33,
+                            width: 33,
+                          ),
                         ),
                       ),
                     ],
                   ),
+                ),
+                const SizedBox(
+                  height: 10,
                 ),
                 CustomTxtField(
                   hintText: "Enter New Password",
@@ -123,8 +132,7 @@ class SecurityPage extends StatelessWidget {
                   topPAdding: 1.3.h,
                   hintStyle: TextStyle(
                       color: Colors.grey.shade700,
-                      fontSize: 16,
-                      letterSpacing: 0.5,
+                      fontSize: 15,
                       fontFamily: "Poppings"),
                 ),
                 CustomTxtField(
@@ -133,8 +141,7 @@ class SecurityPage extends StatelessWidget {
                   topPAdding: 1.3.h,
                   hintStyle: TextStyle(
                       color: Colors.grey.shade700,
-                      fontSize: 16,
-                      letterSpacing: 0.5,
+                      fontSize: 15,
                       fontFamily: "Poppings"),
                 ),
                 CustomTxtField(
@@ -143,8 +150,7 @@ class SecurityPage extends StatelessWidget {
                   topPAdding: 1.3.h,
                   hintStyle: TextStyle(
                       color: Colors.grey.shade700,
-                      fontSize: 16,
-                      letterSpacing: 0.5,
+                      fontSize: 15,
                       fontFamily: "Poppings"),
                 ),
                 const SizedBox(

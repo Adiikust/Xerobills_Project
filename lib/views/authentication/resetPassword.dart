@@ -16,27 +16,20 @@ class ResetPassword extends StatelessWidget {
           Column(
             children: [
               Padding(
-                padding: EdgeInsets.only(top: 10.h),
+                padding: EdgeInsets.only(top: 13.h),
                 child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Image.asset(
-                      "assets/media/xerobills-logo.png",
-                      width: 53.w,
-                    ),
+                  child: Image.asset(
+                    "assets/media/xerobills-logo.png",
+                    width: 53.w,
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.only(top: 13.h),
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Image.asset(
-                      "assets/media/reset-password-illustration.png",
-                      width: 150,
-                    ),
-                  ),
+              const SizedBox(height: 80),
+              Center(
+                child: Image.asset(
+                  "assets/media/reset-password-illustration.png",
+                  width: 130,
+                  height: 130,
                 ),
               ),
             ],
@@ -74,7 +67,7 @@ class ResetPassword extends StatelessWidget {
                             fontFamily: "Poppings"),
                       ),
                       GestureDetector(
-                        onTap: (){
+                        onTap: () {
                           Get.back();
                         },
                         child: Container(
@@ -103,7 +96,7 @@ class ResetPassword extends StatelessWidget {
                           elevation: 4,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
-                          fixedSize: Size(286, 53),
+                          fixedSize: const Size(286, 53),
                           backgroundColor: const Color(0xff026F2E)),
                       onPressed: () {},
                       child: const Text(
@@ -123,7 +116,7 @@ class ResetPassword extends StatelessWidget {
                         foregroundColor: const Color(0xff026F2E),
                       ),
                       onPressed: () {
-                          Get.to(()=>const CreateAccount());
+                        Get.to(() => const CreateAccount());
                       },
                       child: Text(
                         "Create Account",

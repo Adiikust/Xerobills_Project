@@ -37,6 +37,7 @@ class Beneficiaries extends StatelessWidget {
                     style: TextStyle(
                         fontFamily: "Poppins",
                         fontSize: 20,
+                        fontWeight: FontWeight.w600,
                         color: Color(0xff026F2E)),
                   ),
                   GestureDetector(
@@ -50,8 +51,11 @@ class Beneficiaries extends StatelessWidget {
                         left: 10,
                         bottom: 10,
                       ),
-                      child:
-                          SvgPicture.asset("assets/media/svg/vector-add.svg"),
+                      child: SvgPicture.asset(
+                        "assets/media/svg/vector-add.svg",
+                        height: 26,
+                        width: 26,
+                      ),
                     ),
                   ),
                 ],
@@ -76,12 +80,11 @@ class Beneficiaries extends StatelessWidget {
                       hintStyle: TextStyle(
                           color: Colors.grey.shade700,
                           fontSize: 14,
-                          letterSpacing: 0.5,
                           fontFamily: "Poppings"),
                       contentPadding: const EdgeInsets.only(left: 29, right: 5),
                       focusedBorder: const OutlineInputBorder(
                         borderSide:
-                            BorderSide(width: 1.5, color: Color(0xff026F2E)),
+                            BorderSide(width: 1, color: Color(0xff026F2E)),
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(10),
                             topRight: Radius.circular(10),
@@ -90,7 +93,7 @@ class Beneficiaries extends StatelessWidget {
                       ),
                       border: const OutlineInputBorder(
                         borderSide:
-                            BorderSide(width: 1.5, color: Color(0xff026F2E)),
+                            BorderSide(width: 1, color: Color(0xff026F2E)),
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(10),
                             topRight: Radius.circular(10),
@@ -99,7 +102,7 @@ class Beneficiaries extends StatelessWidget {
                       ),
                       enabledBorder: const OutlineInputBorder(
                         borderSide:
-                            BorderSide(width: 1.5, color: Color(0xff026F2E)),
+                            BorderSide(width: 1, color: Color(0xff026F2E)),
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(10),
                             topRight: Radius.circular(10),
@@ -120,12 +123,12 @@ class Beneficiaries extends StatelessWidget {
                 height: 15,
               ),
               Container(
-                margin: const EdgeInsets.symmetric(vertical: 5),
+                // margin: const EdgeInsets.symmetric(vertical: 5),
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
                     color: const Color(0xffBFD7DE),
-                    borderRadius: BorderRadius.circular(20)),
+                    borderRadius: BorderRadius.circular(10)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -135,22 +138,22 @@ class Beneficiaries extends StatelessWidget {
                           padding: const EdgeInsets.only(top: 6.0, bottom: 0),
                           child: Image.asset(
                             "assets/media/default-avatar-md.png",
-                            height: 65,
+                            height: 50,
                             scale: 0.5,
                             width: 65,
                           ),
                         ),
-                        const SizedBox(width: 4),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             SizedBox(
                               height: 23,
                               child: Text(
                                 "Bashir Momoh",
                                 style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w500,
                                     color: Color(0xff003333),
                                     fontFamily: "Poppins"),
                               ),
@@ -171,8 +174,7 @@ class Beneficiaries extends StatelessWidget {
                         Get.to(() => const MyProfilePersonalUpdate());
                       },
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 8.0, vertical: 8),
+                        padding: const EdgeInsets.symmetric(vertical: 8),
                         child:
                             SvgPicture.asset("assets/media/svg/dropleft.svg"),
                       ),
@@ -181,12 +183,12 @@ class Beneficiaries extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 8,
+                height: 20,
               ),
               Expanded(
                 child: ListView.builder(
                   physics: const BouncingScrollPhysics(),
-                  itemCount: 3,
+                  itemCount: 5,
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8.0),

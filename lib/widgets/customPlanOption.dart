@@ -17,12 +17,11 @@ class CustomPlanOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        Get.to(()=>InternetSubscriptionSummary());
+      onTap: () {
+        Get.to(() => InternetSubscriptionSummary());
       },
       child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 5),
-        height: 50,
+        height: 45,
         decoration: BoxDecoration(
           border: Border.all(
             color: const Color(0xff026F2E),
@@ -33,24 +32,22 @@ class CustomPlanOption extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              padding: const EdgeInsets.only(left: 19),
               child: Row(
                 children: [
                   Text(
                     "$dataAmount ",
                     style: const TextStyle(
                         color: Color(0xff003333),
-                        letterSpacing: 0.5,
                         fontSize: 16,
+                        fontWeight: FontWeight.w500,
                         fontFamily: "Poppings"),
                   ),
                   Text(
-                    days > 1?
-                    "($days Days Plan)": "($days Day Plan)",
+                    days > 1 ? "($days Days Plan)" : "($days Day Plan)",
                     style: const TextStyle(
                         color: Color(0xff003333),
-                        letterSpacing: 0.5,
-                        fontSize: 16,
+                        fontSize: 14,
                         fontFamily: "Poppings"),
                   ),
                 ],

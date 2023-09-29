@@ -4,18 +4,18 @@ import 'package:get/get.dart';
 import 'package:xerobills/widgets/dashboard.dart';
 
 class TransactionDetails extends StatelessWidget {
-  TransactionDetails({super.key});
+  const TransactionDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xffF5F5F5),
+        backgroundColor: const Color(0xffF5F5F5),
         body: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: Center(
             child: Padding(
-              padding: EdgeInsets.only(left: 25, right: 25, top: 10),
+              padding: const EdgeInsets.only(left: 25, right: 25, top: 15),
               child: Column(
                 children: [
                   Row(
@@ -27,16 +27,17 @@ class TransactionDetails extends StatelessWidget {
                         },
                         child: Container(
                             color: Colors.transparent,
-                            padding: EdgeInsets.only(
+                            padding: const EdgeInsets.only(
                                 top: 10, left: 2, bottom: 10, right: 10),
                             child: SvgPicture.asset(
                                 "assets/media/svg/arrowleft.svg")),
                       ),
-                      Text(
+                      const Text(
                         "Transaction Details",
                         style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: 20,
+                            fontWeight: FontWeight.w500,
                             color: Color(0xff026F2E)),
                       ),
                       Container(
@@ -44,35 +45,34 @@ class TransactionDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 30,
                     backgroundColor: Colors.transparent,
                     backgroundImage:
                         AssetImage("assets/media/providers/mtn.png"),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 10.0, bottom: 15),
+                    padding: const EdgeInsets.only(top: 10.0, bottom: 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 3.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 3.0),
                           child: SvgPicture.asset(
                             "assets/media/svg/naira.svg",
-                            // ignore: deprecated_member_use
-                            color: Color(0xff003333),
+                            color: const Color(0xff003333),
                             height: 18,
                           ),
                         ),
-                        Text(
+                        const Text(
                           "3,500.00",
                           style: TextStyle(
                               color: Color(0xff003333),
-                              letterSpacing: 0.5,
                               fontSize: 22,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Poppings"),
                         ),
                       ],
@@ -81,135 +81,125 @@ class TransactionDetails extends StatelessWidget {
                   Container(
                     height: 265,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Color(0xff026F2E), width: 1.2),
+                      border:
+                          Border.all(color: const Color(0xff026F2E), width: 1),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 15, vertical: 10),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               "Date",
                               style: TextStyle(
                                   color: Color(0xff026F2E),
-                                  letterSpacing: 0.5,
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontFamily: "Poppings"),
                             ),
                             Text(
                               "March 20, 2023 at 22:06",
                               style: TextStyle(
                                   color: Color(0xff003333),
-                                  letterSpacing: 0.5,
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontFamily: "Poppings"),
                             )
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               "Beneficiary",
                               style: TextStyle(
                                   color: Color(0xff026F2E),
-                                  letterSpacing: 0.5,
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontFamily: "Poppings"),
                             ),
                             Text(
                               "Abdulhaqq Sule",
                               style: TextStyle(
                                   color: Color(0xff003333),
-                                  letterSpacing: 0.5,
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontFamily: "Poppings"),
                             )
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               "Phone Number",
                               style: TextStyle(
                                   color: Color(0xff026F2E),
-                                  letterSpacing: 0.5,
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontFamily: "Poppings"),
                             ),
                             Text(
                               "+234 800 000 0000",
                               style: TextStyle(
                                   color: Color(0xff003333),
-                                  letterSpacing: 0.5,
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontFamily: "Poppings"),
                             )
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               "NetWork",
                               style: TextStyle(
                                   color: Color(0xff026F2E),
-                                  letterSpacing: 0.5,
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontFamily: "Poppings"),
                             ),
                             Text(
                               "MTN",
                               style: TextStyle(
                                   color: Color(0xff003333),
-                                  letterSpacing: 0.5,
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontFamily: "Poppings"),
                             )
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               "Internet Plan",
                               style: TextStyle(
                                   color: Color(0xff026F2E),
-                                  letterSpacing: 0.5,
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontFamily: "Poppings"),
                             ),
                             Text(
                               "2.5GB (2 Day Plan)",
                               style: TextStyle(
                                   color: Color(0xff003333),
-                                  letterSpacing: 0.5,
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontFamily: "Poppings"),
                             )
                           ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               "Payment Method",
                               style: TextStyle(
                                   color: Color(0xff026F2E),
-                                  letterSpacing: 0.5,
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontFamily: "Poppings"),
                             ),
                             Text(
                               "Wallet",
                               style: TextStyle(
                                   color: Color(0xff003333),
-                                  letterSpacing: 0.5,
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   fontFamily: "Poppings"),
                             )
                           ],
@@ -217,28 +207,29 @@ class TransactionDetails extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 50,
                   ),
                   Container(
                     height: 67.5,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Color(0xffBFD7DE), width: 1.2),
+                      border:
+                          Border.all(color: const Color(0xffBFD7DE), width: 1),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 15, vertical: 10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text(
                               "Transaction Reference",
                               style: TextStyle(
                                   color: Color(0xff009933),
                                   fontSize: 12,
-                                  letterSpacing: 0.3,
                                   fontWeight: FontWeight.w500,
                                   fontFamily: "Poppings"),
                             ),
@@ -246,8 +237,7 @@ class TransactionDetails extends StatelessWidget {
                               "1234567890000",
                               style: TextStyle(
                                   color: Color(0xff003333),
-                                  fontSize: 18,
-                                  letterSpacing: 0.3,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w500,
                                   fontFamily: "Poppings"),
                             ),
@@ -255,13 +245,12 @@ class TransactionDetails extends StatelessWidget {
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text(
                               "Payment Method",
                               style: TextStyle(
                                   color: Color(0xff009933),
                                   fontSize: 12,
-                                  letterSpacing: 0.3,
                                   fontWeight: FontWeight.w500,
                                   fontFamily: "Poppings"),
                             ),
@@ -269,8 +258,7 @@ class TransactionDetails extends StatelessWidget {
                               "Wallet",
                               style: TextStyle(
                                   color: Color(0xff003333),
-                                  fontSize: 18,
-                                  letterSpacing: 0.3,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w500,
                                   fontFamily: "Poppings"),
                             ),
@@ -279,7 +267,7 @@ class TransactionDetails extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
@@ -288,17 +276,17 @@ class TransactionDetails extends StatelessWidget {
                       Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 vertical: 8, horizontal: 23),
                             child: SvgPicture.asset(
                               "assets/media/svg/share.svg",
-                              height: 21,
-                              width: 18,
+                              height: 22,
+                              width: 22,
                               // ignore: deprecated_member_use
-                              color: Color(0xff003333),
+                              color: const Color(0xff003333),
                             ),
                           ),
-                          Text(
+                          const Text(
                             "Share",
                             style: TextStyle(
                                 fontSize: 15,
@@ -310,16 +298,16 @@ class TransactionDetails extends StatelessWidget {
                       Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: SvgPicture.asset(
                               "assets/media/svg/save.svg",
-                              height: 21,
-                              width: 18,
+                              height: 22,
+                              width: 22,
                               // ignore: deprecated_member_use
-                              color: Color(0xff003333),
+                              color: const Color(0xff003333),
                             ),
                           ),
-                          Text(
+                          const Text(
                             "Save",
                             style: TextStyle(
                                 fontSize: 15,
@@ -331,16 +319,16 @@ class TransactionDetails extends StatelessWidget {
                       Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: SvgPicture.asset(
                               "assets/media/svg/recurring.svg",
-                              height: 21,
-                              width: 18,
+                              height: 22,
+                              width: 22,
                               // ignore: deprecated_member_use
-                              color: Color(0xff003333),
+                              color: const Color(0xff003333),
                             ),
                           ),
-                          Text(
+                          const Text(
                             "Recurring",
                             style: TextStyle(
                                 fontSize: 15,
@@ -351,7 +339,7 @@ class TransactionDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   InkWell(
@@ -359,12 +347,12 @@ class TransactionDetails extends StatelessWidget {
                       Get.offAll(() => DashBoard());
                     },
                     child: Container(
-                      height: 56,
+                      height: 50,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Color(0xff026F2E)),
+                        border: Border.all(color: const Color(0xff026F2E)),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Go Home",
                           style: TextStyle(

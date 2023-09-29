@@ -38,7 +38,7 @@ class MyProfile extends StatelessWidget {
                                   "assets/media/svg/arrowleft.svg")),
                         ),
                         const Text(
-                          "My Profile",
+                          "My Profile ",
                           style: TextStyle(
                               fontFamily: "Poppins",
                               fontSize: 20,
@@ -54,12 +54,10 @@ class MyProfile extends StatelessWidget {
                     ),
                     //body
                     Container(
-                      margin: const EdgeInsets.symmetric(vertical: 5),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 5),
+                      padding: const EdgeInsets.symmetric(vertical: 5),
                       decoration: BoxDecoration(
                           color: const Color(0xffBFD7DE),
-                          borderRadius: BorderRadius.circular(20)),
+                          borderRadius: BorderRadius.circular(10)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -70,16 +68,15 @@ class MyProfile extends StatelessWidget {
                                     const EdgeInsets.only(top: 6.0, bottom: 0),
                                 child: Image.asset(
                                   "assets/media/default-avatar-md.png",
-                                  height: 65,
+                                  height: 50,
                                   scale: 0.5,
                                   width: 65,
                                 ),
                               ),
-                              const SizedBox(width: 4),
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
+                                children: const [
                                   SizedBox(
                                     height: 23,
                                     child: Text(
@@ -132,7 +129,6 @@ class MyProfile extends StatelessWidget {
                       hintStyle: TextStyle(
                           color: Colors.grey.shade700,
                           fontSize: 16,
-                          letterSpacing: 0.5,
                           fontFamily: "Poppings"),
                     ),
                     CustomTxtField(
@@ -141,8 +137,7 @@ class MyProfile extends StatelessWidget {
                       topPAdding: 1.3.h,
                       hintStyle: TextStyle(
                           color: Colors.grey.shade700,
-                          fontSize: 16,
-                          letterSpacing: 0.5,
+                          fontSize: 15,
                           fontFamily: "Poppings"),
                     ),
                     const SizedBox(
@@ -161,8 +156,7 @@ class MyProfile extends StatelessWidget {
                       topPAdding: 1.3.h,
                       hintStyle: TextStyle(
                           color: Colors.grey.shade700,
-                          fontSize: 16,
-                          letterSpacing: 0.5,
+                          fontSize: 15,
                           fontFamily: "Poppings"),
                     ),
                     CustomTxtField(
@@ -171,8 +165,7 @@ class MyProfile extends StatelessWidget {
                       topPAdding: 1.3.h,
                       hintStyle: TextStyle(
                           color: Colors.grey.shade700,
-                          fontSize: 16,
-                          letterSpacing: 0.5,
+                          fontSize: 15,
                           fontFamily: "Poppings"),
                     ),
                     const SizedBox(
@@ -191,8 +184,7 @@ class MyProfile extends StatelessWidget {
                       topPAdding: 1.3.h,
                       hintStyle: TextStyle(
                           color: Colors.grey.shade700,
-                          fontSize: 16,
-                          letterSpacing: 0.5,
+                          fontSize: 15,
                           fontFamily: "Poppings"),
                     ),
                     CustomTxtField(
@@ -201,14 +193,13 @@ class MyProfile extends StatelessWidget {
                       topPAdding: 1.3.h,
                       hintStyle: TextStyle(
                           color: Colors.grey.shade700,
-                          fontSize: 16,
-                          letterSpacing: 0.5,
+                          fontSize: 15,
                           fontFamily: "Poppings"),
                     ),
                   ],
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 16,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -244,7 +235,6 @@ class MyProfile extends StatelessWidget {
                         child: Text(
                           "Cancel",
                           style: TextStyle(
-                              letterSpacing: 0.5,
                               color: const Color(0xff026F2E),
                               fontSize: 2.h,
                               fontFamily: "Poppings"),

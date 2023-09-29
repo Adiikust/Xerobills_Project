@@ -86,7 +86,7 @@ class CableSubscriptionComplete extends StatelessWidget {
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
+                              children: const [
                                 SizedBox(
                                   height: 23,
                                   child: Text(
@@ -132,7 +132,7 @@ class CableSubscriptionComplete extends StatelessWidget {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: [
+                                    children: const [
                                       Text(
                                         "Myself",
                                         style: TextStyle(
@@ -220,7 +220,7 @@ class CableSubscriptionComplete extends StatelessWidget {
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text(
                               "Transaction Reference",
                               style: TextStyle(
@@ -243,7 +243,7 @@ class CableSubscriptionComplete extends StatelessWidget {
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text(
                               "Payment Method",
                               style: TextStyle(

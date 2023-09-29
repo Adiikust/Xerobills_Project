@@ -28,7 +28,9 @@ class UpdateBeneficiary extends StatelessWidget {
                         color: Colors.transparent,
                         padding: const EdgeInsets.only(
                             top: 10, left: 2, bottom: 10, right: 10),
-                        child: SvgPicture.asset("assets/media/svg/arrowleft.svg")),
+                        child: SvgPicture.asset(
+                          "assets/media/svg/arrowleft.svg",
+                        )),
                   ),
                   const Text(
                     "Update Beneficiary",
@@ -60,7 +62,7 @@ class UpdateBeneficiary extends StatelessWidget {
                 "Abdulhaqq Sule",
                 style: TextStyle(
                   fontSize: 24,
-                  letterSpacing: 0.5,
+                  fontWeight: FontWeight.w500,
                   fontFamily: "Poppings",
                 ),
               ),

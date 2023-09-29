@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 class RecurringPayments extends StatelessWidget {
-  RecurringPayments({super.key});
+  const RecurringPayments({super.key});
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -11,7 +11,7 @@ class RecurringPayments extends StatelessWidget {
         length: 2,
         child: Scaffold(
           body: Padding(
-            padding: EdgeInsets.only(right: 25, left: 25, top: 10),
+            padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
             child: Column(
               children: [
                 Row(
@@ -23,12 +23,12 @@ class RecurringPayments extends StatelessWidget {
                       },
                       child: Container(
                           color: Colors.transparent,
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               top: 10, left: 2, bottom: 10, right: 10),
                           child: SvgPicture.asset(
                               "assets/media/svg/arrowleft.svg")),
                     ),
-                    Text(
+                    const Text(
                       "Recurring Payments",
                       style: TextStyle(
                           fontFamily: "Poppins",
@@ -40,25 +40,25 @@ class RecurringPayments extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: Container(
                     height: 50,
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                     decoration: BoxDecoration(
-                      color: Color(0xffF2F2F2),
+                      color: const Color(0xffF2F2F2),
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: TabBar(
                       splashBorderRadius: BorderRadius.circular(10),
-                      unselectedLabelColor: Color(0xffBDBDBD),
+                      unselectedLabelColor: const Color(0xffBDBDBD),
                       indicator: BoxDecoration(
-                          color: Color(0xff026F2E),
+                          color: const Color(0xff026F2E),
                           borderRadius: BorderRadius.circular(12)),
-                      tabs: [
+                      tabs: const [
                         Tab(
                             child: Text(
                           "Active",
@@ -84,7 +84,7 @@ class RecurringPayments extends StatelessWidget {
                     children: [
                       Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
+                          children: const [
                             Text(
                               "Oops! Nothing to see here",
                               style: TextStyle(
@@ -112,7 +112,7 @@ class RecurringPayments extends StatelessWidget {
                           ]),
                       Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
+                          children: const [
                             Text(
                               "Oops! Nothing to see here",
                               style: TextStyle(

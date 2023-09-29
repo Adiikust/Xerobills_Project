@@ -25,7 +25,7 @@ class Onboarding extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 30, bottom: 40),
+                  padding: const EdgeInsets.only(top: 60, bottom: 40),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -40,7 +40,7 @@ class Onboarding extends StatelessWidget {
                   ),
                 ),
                 const Positioned(
-                    top: 130,
+                    top: 150,
                     child: Text(
                       "Bill payments",
                       style: TextStyle(
@@ -51,7 +51,7 @@ class Onboarding extends StatelessWidget {
                           fontFamily: "Poppings"),
                     )),
                 const Positioned(
-                    top: 158,
+                    top: 190,
                     child: Text(
                       "made easy",
                       style: TextStyle(
@@ -63,25 +63,23 @@ class Onboarding extends StatelessWidget {
                     )),
                 Positioned(child: Image.asset("assets/media/xero-girl.png")),
                 Positioned(
-                    top: 360,
-                    left: 40.sp,
+                    top: 330,
+                    left: 27.sp,
                     child: const Text(
                       "A billing tool you deserve",
                       style: TextStyle(
-                          letterSpacing: 0.5,
                           color: Color(0xff002911),
-                          fontSize: 16,
+                          fontSize: 15,
                           fontFamily: "Poppings"),
                     )),
                 Positioned(
-                    top: 378,
-                    left: 40.sp,
+                    top: 355,
+                    left: 27.sp,
                     child: const Text(
                       "and so much more.",
                       style: TextStyle(
-                          letterSpacing: 0.5,
                           color: Color(0xff002911),
-                          fontSize: 16,
+                          fontSize: 15,
                           fontFamily: "Poppings"),
                     )),
                 Positioned(
@@ -96,7 +94,7 @@ class Onboarding extends StatelessWidget {
                                 elevation: 4,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10)),
-                                fixedSize: const Size(222, 53),
+                                fixedSize: const Size(222, 50),
                                 backgroundColor: const Color(0xff026F2E)),
                             onPressed: () {
                               Get.to(() => const LoginPage());
@@ -115,24 +113,24 @@ class Onboarding extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(
-                            width: 12,
+                            width: 10,
                           ),
                           SvgPicture.asset(
-                            height: 53,
+                            height: 39,
                             "assets/media/svg/login-fingerprint.svg",
                             width: 53,
                           ),
                         ],
                       ),
                       const SizedBox(
-                        height: 7,
+                        height: 10,
                       ),
                       ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               elevation: 4,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10)),
-                              fixedSize: const Size(284, 53),
+                              fixedSize: const Size(270, 50),
                               backgroundColor: Colors.white),
                           onPressed: () {
                             Get.to(() => const CreateAccount());

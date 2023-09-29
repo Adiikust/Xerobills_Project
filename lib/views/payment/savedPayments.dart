@@ -3,14 +3,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 class SavedPayments extends StatelessWidget {
-  SavedPayments({super.key});
+  const SavedPayments({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.only(right: 25, left: 25, top: 10),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
           child: Column(
             children: [
               Row(
@@ -22,12 +22,12 @@ class SavedPayments extends StatelessWidget {
                     },
                     child: Container(
                       color: Colors.transparent,
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                           top: 10, left: 2, bottom: 10, right: 10),
                       child: SvgPicture.asset("assets/media/svg/arrowleft.svg"),
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Saved Payments",
                     style: TextStyle(
                         fontFamily: "Poppins",
@@ -39,12 +39,12 @@ class SavedPayments extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Spacer(),
+              const Spacer(),
               Center(
-                child: Column(children: [
+                child: Column(children: const [
                   Text(
                     "Oops! Nothing to see here",
                     style: TextStyle(
@@ -71,7 +71,7 @@ class SavedPayments extends StatelessWidget {
                   )
                 ]),
               ),
-              Spacer(),
+              const Spacer(),
             ],
           ),
         ),

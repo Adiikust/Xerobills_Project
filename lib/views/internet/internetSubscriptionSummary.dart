@@ -13,9 +13,9 @@ class InternetSubscriptionSummary extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.only(right: 25, left: 25, top: 10),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 15),
           child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -28,12 +28,12 @@ class InternetSubscriptionSummary extends StatelessWidget {
                       },
                       child: Container(
                           color: Colors.transparent,
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               top: 10, left: 2, bottom: 10, right: 10),
                           child: SvgPicture.asset(
                               "assets/media/svg/arrowleft.svg")),
                     ),
-                    Text(
+                    const Text(
                       "Subscription Summary",
                       style: TextStyle(
                           fontFamily: "Poppins",
@@ -45,35 +45,36 @@ class InternetSubscriptionSummary extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   "Review and confirm transaction",
                   style: TextStyle(
                       color: Color(0xff003333),
-                      letterSpacing: 0.5,
                       fontSize: 16,
                       fontFamily: "Poppings"),
                 ),
+                const SizedBox(
+                  height: 10,
+                ),
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 5),
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 10,
                   ),
                   decoration: BoxDecoration(
-                      color: Color(0xffBFD7DE),
-                      borderRadius: BorderRadius.circular(20)),
+                      color: const Color(0xffBFD7DE),
+                      borderRadius: BorderRadius.circular(10)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(top: 8.0, bottom: 0),
+                            padding: const EdgeInsets.only(top: 8.0, bottom: 0),
                             child: Image.asset(
                               "assets/media/default-avatar.png",
-                              height: 60,
+                              height: 50,
                               scale: 0.5,
                               width: 60,
                             ),
@@ -81,7 +82,7 @@ class InternetSubscriptionSummary extends StatelessWidget {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
+                            children: const [
                               Text(
                                 "Bashir Momoh",
                                 style: TextStyle(
@@ -93,6 +94,7 @@ class InternetSubscriptionSummary extends StatelessWidget {
                                 "+234 800 000 0000",
                                 style: TextStyle(
                                     fontSize: 18,
+                                    fontWeight: FontWeight.w500,
                                     color: Color(0xff003333),
                                     fontFamily: "Poppins"),
                               )
@@ -103,34 +105,40 @@ class InternetSubscriptionSummary extends StatelessWidget {
                       GestureDetector(
                         onTap: () {},
                         child: Padding(
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                               horizontal: 8.0, vertical: 8),
-                          child:
-                              SvgPicture.asset("assets/media/svg/green-x.svg"),
+                          child: SvgPicture.asset(
+                            "assets/media/svg/green-x.svg",
+                            height: 26,
+                            width: 26,
+                          ),
                         ),
                       ),
                     ],
                   ),
                 ),
+                const SizedBox(
+                  height: 15,
+                ),
                 Container(
                   height: 25.h,
-                  margin: EdgeInsets.only(top: 10),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Color(0xff026F2E), width: 1.2),
+                    border:
+                        Border.all(color: const Color(0xff026F2E), width: 1),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                        children: const [
                           Text(
                             "Network",
                             style: TextStyle(
                                 color: Color(0xff026F2E),
-                                letterSpacing: 0.5,
                                 fontSize: 15,
                                 fontFamily: "Poppings"),
                           ),
@@ -138,7 +146,6 @@ class InternetSubscriptionSummary extends StatelessWidget {
                             "MTN",
                             style: TextStyle(
                                 color: Color(0xff003333),
-                                letterSpacing: 0.5,
                                 fontWeight: FontWeight.w600,
                                 fontSize: 15,
                                 fontFamily: "Poppings"),
@@ -148,31 +155,28 @@ class InternetSubscriptionSummary extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
+                          const Text(
                             "Internet Plan",
                             style: TextStyle(
                                 color: Color(0xff026F2E),
-                                letterSpacing: 0.5,
                                 fontSize: 15,
                                 fontFamily: "Poppings"),
                           ),
                           Row(
-                            children: [
+                            children: const [
                               Text(
                                 "2.5GB",
                                 style: TextStyle(
                                     color: Color(0xff003333),
-                                    letterSpacing: 0.5,
                                     fontWeight: FontWeight.w600,
-                                    fontSize: 16,
+                                    fontSize: 15,
                                     fontFamily: "Poppings"),
                               ),
                               Text(
                                 "(2 Day Plan)",
                                 style: TextStyle(
                                     color: Color(0xff003333),
-                                    letterSpacing: 0.5,
-                                    fontSize: 16,
+                                    fontSize: 15,
                                     fontFamily: "Poppings"),
                               ),
                             ],
@@ -181,12 +185,11 @@ class InternetSubscriptionSummary extends StatelessWidget {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                        children: const [
                           Text(
                             "Payment Method",
                             style: TextStyle(
                                 color: Color(0xff026F2E),
-                                letterSpacing: 0.5,
                                 fontSize: 15,
                                 fontFamily: "Poppings"),
                           ),
@@ -194,7 +197,6 @@ class InternetSubscriptionSummary extends StatelessWidget {
                             "Wallet",
                             style: TextStyle(
                                 color: Color(0xff003333),
-                                letterSpacing: 0.5,
                                 fontWeight: FontWeight.w600,
                                 fontSize: 15,
                                 fontFamily: "Poppings"),
@@ -204,31 +206,25 @@ class InternetSubscriptionSummary extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
+                          const Text(
                             "Subscription Fee",
                             style: TextStyle(
                                 color: Color(0xff026F2E),
-                                letterSpacing: 0.5,
                                 fontSize: 15,
                                 fontFamily: "Poppings"),
                           ),
                           Row(
                             children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 3.0),
-                                child: SvgPicture.asset(
-                                  "assets/media/svg/dark-naira.svg",
-                                  // ignore: deprecated_member_use
-                                  color: Color(0xff003333),
-                                  height: 11,
-                                ),
+                              SvgPicture.asset(
+                                "assets/media/svg/dark-naira.svg",
+                                color: const Color(0xff003333),
+                                height: 11,
                               ),
-                              Text(
-                                "3,500.00",
+                              const Text(
+                                " 3,500.00",
                                 style: TextStyle(
                                     color: Color(0xff003333),
                                     fontWeight: FontWeight.w600,
-                                    letterSpacing: 0.5,
                                     fontSize: 15,
                                     fontFamily: "Poppings"),
                               ),
@@ -240,10 +236,10 @@ class InternetSubscriptionSummary extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20.0),
+                  padding: const EdgeInsets.symmetric(vertical: 15.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Expanded(
                         child: Padding(
                           padding: EdgeInsets.only(right: 20.0),
@@ -278,10 +274,10 @@ class InternetSubscriptionSummary extends StatelessWidget {
                       GestureDetector(
                         onTap: controller.onWalletTap,
                         child: Container(
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 8),
                           decoration: BoxDecoration(
-                              color: Color(0xffBFD7DE),
+                              color: const Color(0xffBFD7DE),
                               borderRadius: BorderRadius.circular(10)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -289,11 +285,11 @@ class InternetSubscriptionSummary extends StatelessWidget {
                               Row(
                                 children: [
                                   Padding(
-                                    padding: EdgeInsets.all(15.0),
+                                    padding: const EdgeInsets.all(15.0),
                                     child: SvgPicture.asset(
                                         "assets/media/svg/wallet-option.svg"),
                                   ),
-                                  Text(
+                                  const Text(
                                     "Wallet",
                                     style: TextStyle(
                                         fontSize: 15,
@@ -307,17 +303,17 @@ class InternetSubscriptionSummary extends StatelessWidget {
                                   SvgPicture.asset(
                                     "assets/media/svg/dark-naira.svg",
                                     // ignore: deprecated_member_use
-                                    color: Color(0xff003333),
+                                    color: const Color(0xff003333),
                                     height: 12,
                                   ),
-                                  Text(
-                                    "35,000.00",
+                                  const Text(
+                                    " 35,000.00",
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Color(0xff003333),
                                         fontFamily: "Poppins"),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 5,
                                   ),
                                   controller.select == true
@@ -331,16 +327,16 @@ class InternetSubscriptionSummary extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       GestureDetector(
                         onTap: controller.onCardTap,
                         child: Container(
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 8),
                           decoration: BoxDecoration(
-                              color: Color(0xffBFD7DE),
+                              color: const Color(0xffBFD7DE),
                               borderRadius: BorderRadius.circular(10)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -348,11 +344,11 @@ class InternetSubscriptionSummary extends StatelessWidget {
                               Row(
                                 children: [
                                   Padding(
-                                    padding: EdgeInsets.all(15.0),
+                                    padding: const EdgeInsets.all(15.0),
                                     child: SvgPicture.asset(
                                         "assets/media/svg/card-option.svg"),
                                   ),
-                                  Text(
+                                  const Text(
                                     "Card",
                                     style: TextStyle(
                                         fontSize: 15,
@@ -363,14 +359,14 @@ class InternetSubscriptionSummary extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "**** 7196",
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Color(0xff003333),
                                         fontFamily: "Poppins"),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 5,
                                   ),
                                   controller.selected == true
@@ -387,7 +383,7 @@ class InternetSubscriptionSummary extends StatelessWidget {
                     ],
                   );
                 }),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 ElevatedButton(
@@ -396,19 +392,19 @@ class InternetSubscriptionSummary extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
                       fixedSize: Size(55.5.w, 5.5.h),
-                      backgroundColor: Color(0xff026F2E)),
+                      backgroundColor: const Color(0xff026F2E)),
                   onPressed: () {
-                    Get.to(() => InternetSubscriptionCompleted());
+                    Get.to(() => const InternetSubscriptionCompleted());
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      const Text(
                         "Recharge",
                         style: TextStyle(fontSize: 16, fontFamily: "Poppins"),
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 5.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 5.0),
                         child: SvgPicture.asset(
                           "assets/media/svg/naira.svg",
                           height: 13,

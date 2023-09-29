@@ -16,7 +16,7 @@ class AirtimeRechargeDefault extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 15),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Column(
@@ -41,6 +41,7 @@ class AirtimeRechargeDefault extends StatelessWidget {
                       style: TextStyle(
                           fontFamily: "Poppins",
                           fontSize: 20,
+                          fontWeight: FontWeight.w500,
                           color: Color(0xff026F2E)),
                     ),
                     Container(
@@ -49,13 +50,12 @@ class AirtimeRechargeDefault extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 17,
                 ),
                 const Text(
                   "Select Beneficiary",
                   style: TextStyle(
                       color: Color(0xff003333),
-                      letterSpacing: 0.5,
                       fontSize: 16,
                       fontFamily: "Poppings"),
                 ),
@@ -69,7 +69,17 @@ class AirtimeRechargeDefault extends StatelessWidget {
                         ),
                         decoration: BoxDecoration(
                             color: const Color(0xffBFD7DE),
-                            borderRadius: BorderRadius.circular(20)),
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black
+                                    .withOpacity(0.15), // Shadow color
+                                offset: const Offset(
+                                    3, 3), // Shadow position (X, Y)
+                                blurRadius: 3, // Blur radius
+                                spreadRadius: 0, // Spread radius
+                              ),
+                            ]),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -80,7 +90,7 @@ class AirtimeRechargeDefault extends StatelessWidget {
                                       top: 8.0, bottom: 0),
                                   child: Image.asset(
                                     "assets/media/default-avatar.png",
-                                    height: 60,
+                                    height: 50,
                                     scale: 0.5,
                                     width: 60,
                                   ),
@@ -88,7 +98,7 @@ class AirtimeRechargeDefault extends StatelessWidget {
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
+                                  children: const [
                                     Text(
                                       "Bashir Ibrahim (Personal)",
                                       style: TextStyle(
@@ -99,7 +109,7 @@ class AirtimeRechargeDefault extends StatelessWidget {
                                     Text(
                                       "+234 800 000 0000",
                                       style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 16,
                                           color: Color(0xff003333),
                                           fontFamily: "Poppins"),
                                     )
@@ -126,7 +136,7 @@ class AirtimeRechargeDefault extends StatelessWidget {
                           Column(
                             children: [
                               const SizedBox(
-                                height: 15,
+                                height: 19,
                               ),
                               Row(
                                 mainAxisAlignment:
@@ -136,7 +146,7 @@ class AirtimeRechargeDefault extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(10),
                                     child: Image.asset(
                                       "assets/media/providers/mtn.png",
-                                      height: 47,
+                                      height: 44,
                                     ),
                                   ),
                                   const SizedBox(
@@ -144,12 +154,23 @@ class AirtimeRechargeDefault extends StatelessWidget {
                                   ),
                                   Expanded(
                                     child: Container(
-                                      height: 50,
+                                      height: 45,
                                       decoration: BoxDecoration(
-                                        border: Border.all(
-                                            color: const Color(0xff026F2E)),
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
+                                          color: Colors.white,
+                                          border: Border.all(
+                                              color: const Color(0xff026F2E)),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color: Colors.black.withOpacity(
+                                                  0.15), // Shadow color
+                                              offset: const Offset(3,
+                                                  3), // Shadow position (X, Y)
+                                              blurRadius: 3, // Blur radius
+                                              spreadRadius: 0, // Spread radius
+                                            ),
+                                          ]),
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 15),
                                       child: Row(
@@ -160,7 +181,6 @@ class AirtimeRechargeDefault extends StatelessWidget {
                                             "MTN Prepaid",
                                             style: TextStyle(
                                                 color: Color(0xff003333),
-                                                letterSpacing: 0.5,
                                                 fontSize: 15,
                                                 fontFamily: "Poppings"),
                                           ),
@@ -173,16 +193,26 @@ class AirtimeRechargeDefault extends StatelessWidget {
                                 ],
                               ),
                               const SizedBox(
-                                height: 15,
+                                height: 16,
                               ),
                               Container(
                                 height: 50,
                                 decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: const Color(0xff026F2E),
-                                  ),
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
+                                    color: Colors.white,
+                                    border: Border.all(
+                                      color: const Color(0xff026F2E),
+                                    ),
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black
+                                            .withOpacity(0.15), // Shadow color
+                                        offset: const Offset(
+                                            3, 3), // Shadow position (X, Y)
+                                        blurRadius: 3, // Blur radius
+                                        spreadRadius: 0, // Spread radius
+                                      ),
+                                    ]),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -192,7 +222,8 @@ class AirtimeRechargeDefault extends StatelessWidget {
                                           horizontal: 20.0),
                                       child: SvgPicture.asset(
                                         "assets/media/svg/naira.svg",
-                                        // ignore: deprecated_member_use
+                                        width: 16,
+                                        height: 17,
                                         color: const Color(0xff003333),
                                       ),
                                     ),
@@ -209,8 +240,7 @@ class AirtimeRechargeDefault extends StatelessWidget {
                                           hintText: "Amount",
                                           hintStyle: TextStyle(
                                               color: Colors.grey.shade500,
-                                              fontSize: 16,
-                                              letterSpacing: 0.5,
+                                              fontSize: 14,
                                               fontFamily: "Poppings"),
                                           contentPadding: const EdgeInsets.only(
                                               left: 10, right: 5),
@@ -279,13 +309,13 @@ class AirtimeRechargeDefault extends StatelessWidget {
                   );
                 }),
                 const SizedBox(
-                  height: 10,
+                  height: 34,
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 30.0),
+                  padding: const EdgeInsets.symmetric(vertical: 30.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Expanded(
                         child: Padding(
                           padding: EdgeInsets.only(right: 20.0),
@@ -299,7 +329,6 @@ class AirtimeRechargeDefault extends StatelessWidget {
                         "Pay with",
                         style: TextStyle(
                             color: Color(0xff003333),
-                            letterSpacing: 0.5,
                             fontSize: 15,
                             fontFamily: "Poppings"),
                       ),
@@ -339,7 +368,7 @@ class AirtimeRechargeDefault extends StatelessWidget {
                                         "assets/media/svg/wallet-option.svg"),
                                   ),
                                   const Text(
-                                    "Wallet",
+                                    " Wallet",
                                     style: TextStyle(
                                         fontSize: 15,
                                         color: Color(0xff003333),
@@ -445,7 +474,7 @@ class AirtimeRechargeDefault extends StatelessWidget {
                         fixedSize: Size(55.5.w, 5.5.h),
                         backgroundColor: const Color(0xff026F2E)),
                     onPressed: () {
-                      Get.to(() => AirtimeRechargeSummary());
+                      Get.to(() => const AirtimeRechargeSummary());
                     },
                     child: const Text(
                       "Recharge",

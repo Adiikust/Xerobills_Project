@@ -5,15 +5,15 @@ import 'package:xerobills/views/payment/recurringPayments.dart';
 import 'package:xerobills/views/payment/savedPayments.dart';
 
 class PaymentsPage extends StatelessWidget {
-  PaymentsPage({super.key});
+  const PaymentsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xffF5F5F5),
+        backgroundColor: const Color(0xffF5F5F5),
         body: Padding(
-          padding: EdgeInsets.only(right: 25, left: 25, top: 10),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -26,12 +26,12 @@ class PaymentsPage extends StatelessWidget {
                     },
                     child: Container(
                         color: Colors.transparent,
-                        padding: EdgeInsets.only(
+                        padding: const EdgeInsets.only(
                             top: 10, left: 2, bottom: 10, right: 10),
                         child:
                             SvgPicture.asset("assets/media/svg/arrowleft.svg")),
                   ),
-                  Text(
+                  const Text(
                     "Payments",
                     style: TextStyle(
                         fontFamily: "Poppins",
@@ -43,11 +43,11 @@ class PaymentsPage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Material(
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(22),
                   bottomLeft: Radius.circular(8),
                   bottomRight: Radius.circular(8),
@@ -55,22 +55,22 @@ class PaymentsPage extends StatelessWidget {
                 ),
                 elevation: 4,
                 child: InkWell(
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(22),
                     bottomLeft: Radius.circular(8),
                     bottomRight: Radius.circular(8),
                     topRight: Radius.circular(8),
                   ),
-                  onTap: () => Get.to(() => RecurringPayments()),
+                  onTap: () => Get.to(() => const RecurringPayments()),
                   child: Container(
                     height: 122,
-                    padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                    padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text(
                               "Recurring payments",
                               style: TextStyle(
@@ -96,11 +96,11 @@ class PaymentsPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Material(
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(8),
                   bottomLeft: Radius.circular(8),
                   bottomRight: Radius.circular(22),
@@ -108,22 +108,22 @@ class PaymentsPage extends StatelessWidget {
                 ),
                 elevation: 4,
                 child: InkWell(
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(8),
                     bottomLeft: Radius.circular(8),
                     bottomRight: Radius.circular(22),
                     topRight: Radius.circular(8),
                   ),
-                  onTap: () => Get.to(() => SavedPayments()),
+                  onTap: () => Get.to(() => const SavedPayments()),
                   child: Container(
                     height: 122,
-                    padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                    padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text(
                               "Saved payments",
                               style: TextStyle(

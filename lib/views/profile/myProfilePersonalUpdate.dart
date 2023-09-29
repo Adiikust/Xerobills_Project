@@ -49,12 +49,11 @@ class MyProfilePersonalUpdate extends StatelessWidget {
                   height: 20,
                 ),
                 Container(
-                  margin: const EdgeInsets.symmetric(vertical: 5),
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  // margin: const EdgeInsets.symmetric(vertical: 5),
+                  padding: const EdgeInsets.symmetric(vertical: 5),
                   decoration: BoxDecoration(
                       color: const Color(0xffBFD7DE),
-                      borderRadius: BorderRadius.circular(20)),
+                      borderRadius: BorderRadius.circular(10)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -64,7 +63,7 @@ class MyProfilePersonalUpdate extends StatelessWidget {
                             padding: const EdgeInsets.only(top: 6.0, bottom: 0),
                             child: Image.asset(
                               "assets/media/default-avatar-md.png",
-                              height: 65,
+                              height: 50,
                               scale: 0.5,
                               width: 65,
                             ),
@@ -73,7 +72,7 @@ class MyProfilePersonalUpdate extends StatelessWidget {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
+                            children: const [
                               SizedBox(
                                 height: 23,
                                 child: Text(
@@ -104,8 +103,7 @@ class MyProfilePersonalUpdate extends StatelessWidget {
                   topPAdding: 2.h,
                   hintStyle: TextStyle(
                       color: Colors.grey.shade700,
-                      fontSize: 16,
-                      letterSpacing: 0.5,
+                      fontSize: 15,
                       fontFamily: "Poppings"),
                 ),
                 CustomTxtField(
@@ -114,8 +112,7 @@ class MyProfilePersonalUpdate extends StatelessWidget {
                   topPAdding: 1.3.h,
                   hintStyle: TextStyle(
                       color: Colors.grey.shade700,
-                      fontSize: 16,
-                      letterSpacing: 0.5,
+                      fontSize: 15,
                       fontFamily: "Poppings"),
                 ),
                 Padding(
@@ -123,7 +120,7 @@ class MyProfilePersonalUpdate extends StatelessWidget {
                   child: Material(
                     shape: const RoundedRectangleBorder(
                       side: BorderSide(
-                        width: 1.5,
+                        width: 1,
                         color: Color(0xff026F2E),
                       ),
                       borderRadius: BorderRadius.only(
@@ -148,7 +145,6 @@ class MyProfilePersonalUpdate extends StatelessWidget {
                               "Gender",
                               style: TextStyle(
                                   color: Colors.grey.shade700,
-                                  letterSpacing: 0.5,
                                   fontSize: 15,
                                   fontFamily: "Poppings"),
                             ),
@@ -164,7 +160,7 @@ class MyProfilePersonalUpdate extends StatelessWidget {
                   child: Material(
                     shape: const RoundedRectangleBorder(
                       side: BorderSide(
-                        width: 1.5,
+                        width: 1,
                         color: Color(0xff026F2E),
                       ),
                       borderRadius: BorderRadius.only(
@@ -189,7 +185,6 @@ class MyProfilePersonalUpdate extends StatelessWidget {
                               "Date of Birth",
                               style: TextStyle(
                                   color: Colors.grey.shade700,
-                                  letterSpacing: 0.5,
                                   fontSize: 15,
                                   fontFamily: "Poppings"),
                             ),
@@ -213,7 +208,7 @@ class MyProfilePersonalUpdate extends StatelessWidget {
                   onPressed: () {},
                   child: const Text(
                     "Update",
-                    style: TextStyle(fontSize: 16, fontFamily: "Poppins"),
+                    style: TextStyle(fontSize: 15, fontFamily: "Poppins"),
                   ),
                 ),
                 SizedBox(
@@ -234,7 +229,6 @@ class MyProfilePersonalUpdate extends StatelessWidget {
                     child: Text(
                       "Cancel",
                       style: TextStyle(
-                          letterSpacing: 0.5,
                           color: const Color(0xff026F2E),
                           fontSize: 2.h,
                           fontFamily: "Poppings"),

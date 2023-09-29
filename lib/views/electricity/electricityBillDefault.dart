@@ -15,9 +15,9 @@ class ElectricityBIllDefault extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.only(right: 25, left: 25, top: 10),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 15),
           child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -30,16 +30,17 @@ class ElectricityBIllDefault extends StatelessWidget {
                       },
                       child: Container(
                           color: Colors.transparent,
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               top: 10, left: 2, bottom: 10, right: 10),
                           child: SvgPicture.asset(
                               "assets/media/svg/arrowleft.svg")),
                     ),
-                    Text(
+                    const Text(
                       "Electricity Bill",
                       style: TextStyle(
                           fontFamily: "Poppins",
                           fontSize: 20,
+                          fontWeight: FontWeight.w500,
                           color: Color(0xff026F2E)),
                     ),
                     Container(
@@ -47,33 +48,32 @@ class ElectricityBIllDefault extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   "Select Beneficiary",
                   style: TextStyle(
                       color: Color(0xff003333),
-                      letterSpacing: 0.5,
                       fontSize: 16,
                       fontFamily: "Poppings"),
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 5),
-                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  margin: const EdgeInsets.symmetric(vertical: 5),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
-                      color: Color(0xffBFD7DE),
-                      borderRadius: BorderRadius.circular(20)),
+                      color: const Color(0xffBFD7DE),
+                      borderRadius: BorderRadius.circular(10)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(top: 8.0, bottom: 0),
+                            padding: const EdgeInsets.only(top: 8.0, bottom: 0),
                             child: Image.asset(
                               "assets/media/default-avatar.png",
-                              height: 60,
+                              height: 50,
                               scale: 0.5,
                               width: 60,
                             ),
@@ -81,7 +81,7 @@ class ElectricityBIllDefault extends StatelessWidget {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
+                            children: const [
                               Text(
                                 "Personal",
                                 style: TextStyle(
@@ -103,27 +103,9 @@ class ElectricityBIllDefault extends StatelessWidget {
                       GetBuilder<DropdownController>(
                           builder: (dropDownController) {
                         return GestureDetector(
-                          onTap: () {
-                            // Get.defaultDialog(
-                            //   content: DropdownButton<String>(
-                            //     value: dropdownController.selectedValue,
-                            //     items: [
-                            //       DropdownMenuItem(
-                            //           child: Text('Option 1'), value: 'Option 1'),
-                            //       DropdownMenuItem(
-                            //           child: Text('Option 2'), value: 'Option 2'),
-                            //       DropdownMenuItem(
-                            //           child: Text('Option 3'), value: 'Option 3'),
-                            //     ],
-                            //     onChanged: (String? value) {
-                            //       dropdownController.setSelectedValue(value ?? '');
-                            //       Get.back();
-                            //     },
-                            //   ),
-                            // );
-                          },
+                          onTap: () {},
                           child: Padding(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: 8.0, vertical: 8),
                             child: SvgPicture.asset(
                                 "assets/media/svg/dropdown.svg"),
@@ -133,24 +115,23 @@ class ElectricityBIllDefault extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
-                  height: 50,
+                  height: 45,
                   decoration: BoxDecoration(
-                    border: Border.all(color: Color(0xff026F2E)),
+                    border: Border.all(color: const Color(0xff026F2E)),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "Prepaid",
                         style: TextStyle(
                             color: Color(0xff003333),
-                            letterSpacing: 0.5,
                             fontSize: 15,
                             fontFamily: "Poppings"),
                       ),
@@ -158,38 +139,37 @@ class ElectricityBIllDefault extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
-                  height: 50,
+                  height: 45,
                   decoration: BoxDecoration(
-                    border: Border.all(color: Color(0xff026F2E)),
+                    border: Border.all(color: const Color(0xff026F2E)),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: const [
                       Text(
                         "+234 000 000 0000",
                         style: TextStyle(
                             color: Color(0xff003333),
-                            letterSpacing: 0.5,
                             fontSize: 15,
                             fontFamily: "Poppings"),
                       )
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
-                  height: 50,
+                  height: 45,
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: Color(0xff026F2E),
+                      color: const Color(0xff026F2E),
                     ),
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -197,30 +177,31 @@ class ElectricityBIllDefault extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
                         child: SvgPicture.asset(
                           "assets/media/svg/naira.svg",
-                          // ignore: deprecated_member_use
-                          color: Color(0xff003333),
+                          width: 16,
+                          height: 16,
+                          color: const Color(0xff003333),
                         ),
                       ),
                       Container(
                           height: MediaQuery.of(context).size.height,
                           width: 1.5,
-                          color: Color(0xff026F2E)),
+                          color: const Color(0xff026F2E)),
                       Expanded(
                         child: TextField(
-                          cursorColor: Color(0xff026F2E),
+                          cursorColor: const Color(0xff026F2E),
                           keyboardType: TextInputType.number,
                           decoration: InputDecoration(
                             hintText: "Amount",
                             hintStyle: TextStyle(
                                 color: Colors.grey.shade500,
-                                fontSize: 16,
-                                letterSpacing: 0.5,
+                                fontSize: 15,
                                 fontFamily: "Poppings"),
-                            contentPadding: EdgeInsets.only(left: 10, right: 5),
-                            focusedBorder: OutlineInputBorder(
+                            contentPadding:
+                                const EdgeInsets.only(left: 10, right: 5),
+                            focusedBorder: const OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.transparent),
                               borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(0),
@@ -228,7 +209,7 @@ class ElectricityBIllDefault extends StatelessWidget {
                                   bottomLeft: Radius.circular(0),
                                   bottomRight: Radius.circular(10)),
                             ),
-                            enabledBorder: OutlineInputBorder(
+                            enabledBorder: const OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.transparent),
                               borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(0),
@@ -237,7 +218,7 @@ class ElectricityBIllDefault extends StatelessWidget {
                                   bottomRight: Radius.circular(10)),
                             ),
                           ),
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 15,
                             color: Color(0xff000000),
                           ),
@@ -247,10 +228,10 @@ class ElectricityBIllDefault extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20.0),
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Expanded(
                         child: Padding(
                           padding: EdgeInsets.only(right: 20.0),
@@ -287,11 +268,11 @@ class ElectricityBIllDefault extends StatelessWidget {
                         onTap: controller.onWalletTap,
                         child: Container(
                           height: 56,
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                             horizontal: 10,
                           ),
                           decoration: BoxDecoration(
-                              color: Color(0xffBFD7DE),
+                              color: const Color(0xffBFD7DE),
                               borderRadius: BorderRadius.circular(10)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -299,11 +280,11 @@ class ElectricityBIllDefault extends StatelessWidget {
                               Row(
                                 children: [
                                   Padding(
-                                    padding: EdgeInsets.all(15.0),
+                                    padding: const EdgeInsets.all(15.0),
                                     child: SvgPicture.asset(
                                         "assets/media/svg/wallet-option.svg"),
                                   ),
-                                  Text(
+                                  const Text(
                                     "Wallet",
                                     style: TextStyle(
                                         fontSize: 15,
@@ -317,17 +298,17 @@ class ElectricityBIllDefault extends StatelessWidget {
                                   SvgPicture.asset(
                                     "assets/media/svg/dark-naira.svg",
                                     // ignore: deprecated_member_use
-                                    color: Color(0xff003333),
+                                    color: const Color(0xff003333),
                                     height: 12,
                                   ),
-                                  Text(
-                                    "35,000.00",
+                                  const Text(
+                                    " 35,000.00",
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Color(0xff003333),
                                         fontFamily: "Poppins"),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 5,
                                   ),
                                   controller.select == true
@@ -341,18 +322,18 @@ class ElectricityBIllDefault extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       GestureDetector(
                         onTap: controller.onCardTap,
                         child: Container(
                           height: 56,
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                             horizontal: 10,
                           ),
                           decoration: BoxDecoration(
-                              color: Color(0xffBFD7DE),
+                              color: const Color(0xffBFD7DE),
                               borderRadius: BorderRadius.circular(10)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -360,11 +341,11 @@ class ElectricityBIllDefault extends StatelessWidget {
                               Row(
                                 children: [
                                   Padding(
-                                    padding: EdgeInsets.all(15.0),
+                                    padding: const EdgeInsets.all(15.0),
                                     child: SvgPicture.asset(
                                         "assets/media/svg/card-option.svg"),
                                   ),
-                                  Text(
+                                  const Text(
                                     "Card",
                                     style: TextStyle(
                                         fontSize: 15,
@@ -375,14 +356,14 @@ class ElectricityBIllDefault extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "**** 7196",
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Color(0xff003333),
                                         fontFamily: "Poppins"),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 5,
                                   ),
                                   controller.selected == true
@@ -399,7 +380,7 @@ class ElectricityBIllDefault extends StatelessWidget {
                     ],
                   );
                 }),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 ElevatedButton(
@@ -408,11 +389,11 @@ class ElectricityBIllDefault extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
                         fixedSize: Size(55.5.w, 5.5.h),
-                        backgroundColor: Color(0xff026F2E)),
+                        backgroundColor: const Color(0xff026F2E)),
                     onPressed: () {
-                      Get.to(() => ElectricityBillSummary());
+                      Get.to(() => const ElectricityBillSummary());
                     },
-                    child: Text(
+                    child: const Text(
                       "Vend Electricity",
                       style: TextStyle(fontSize: 16, fontFamily: "Poppins"),
                     )),

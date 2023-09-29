@@ -15,9 +15,9 @@ class CableSubscriptionDefault extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.only(right: 25, left: 25, top: 10),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 10),
           child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -30,12 +30,12 @@ class CableSubscriptionDefault extends StatelessWidget {
                       },
                       child: Container(
                           color: Colors.transparent,
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               top: 10, left: 2, bottom: 10, right: 10),
                           child: SvgPicture.asset(
                               "assets/media/svg/arrowleft.svg")),
                     ),
-                    Text(
+                    const Text(
                       "Cable Subscription",
                       style: TextStyle(
                           fontFamily: "Poppins",
@@ -47,10 +47,10 @@ class CableSubscriptionDefault extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   "Select Beneficiary",
                   style: TextStyle(
                       color: Color(0xff003333),
@@ -59,10 +59,10 @@ class CableSubscriptionDefault extends StatelessWidget {
                       fontFamily: "Poppings"),
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 5),
-                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  margin: const EdgeInsets.symmetric(vertical: 5),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
-                      color: Color(0xffBFD7DE),
+                      color: const Color(0xffBFD7DE),
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -70,7 +70,7 @@ class CableSubscriptionDefault extends StatelessWidget {
                       Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(top: 8.0, bottom: 0),
+                            padding: const EdgeInsets.only(top: 8.0, bottom: 0),
                             child: Image.asset(
                               "assets/media/default-avatar.png",
                               height: 60,
@@ -81,7 +81,7 @@ class CableSubscriptionDefault extends StatelessWidget {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
+                            children: const [
                               Text(
                                 "Personal",
                                 style: TextStyle(
@@ -123,7 +123,7 @@ class CableSubscriptionDefault extends StatelessWidget {
                             // );
                           },
                           child: Padding(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: 8.0, vertical: 8),
                             child: SvgPicture.asset(
                                 "assets/media/svg/dropdown.svg"),
@@ -133,24 +133,24 @@ class CableSubscriptionDefault extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 SvgPicture.asset("assets/media/providers/dstv.svg"),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 Container(
                   height: 50,
                   decoration: BoxDecoration(
-                    border: Border.all(color: Color(0xff026F2E)),
+                    border: Border.all(color: const Color(0xff026F2E)),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "Yanga",
                         style: TextStyle(
                             color: Color(0xff003333),
@@ -162,14 +162,14 @@ class CableSubscriptionDefault extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
                   height: 50,
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: Color(0xff026F2E),
+                      color: const Color(0xff026F2E),
                     ),
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -177,18 +177,18 @@ class CableSubscriptionDefault extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
                         child: SvgPicture.asset(
                           "assets/media/svg/naira.svg",
                           // ignore: deprecated_member_use
-                          color: Color(0xff003333),
+                          color: const Color(0xff003333),
                         ),
                       ),
                       Container(
                           height: MediaQuery.of(context).size.height,
                           width: 1.5,
-                          color: Color(0xff026F2E)),
-                      Expanded(
+                          color: const Color(0xff026F2E)),
+                      const Expanded(
                         child: TextField(
                           cursorColor: Color(0xff026F2E),
                           keyboardType: TextInputType.number,
@@ -236,10 +236,10 @@ class CableSubscriptionDefault extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Text(
+                const Text(
                   "₦50 fee applies",
                   style: TextStyle(
                       color: Color(0xff009933),
@@ -248,10 +248,10 @@ class CableSubscriptionDefault extends StatelessWidget {
                       fontFamily: "Poppings"),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 25.0),
+                  padding: const EdgeInsets.symmetric(vertical: 25.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Expanded(
                         child: Padding(
                           padding: EdgeInsets.only(right: 20.0),
@@ -288,11 +288,11 @@ class CableSubscriptionDefault extends StatelessWidget {
                         onTap: controller.onWalletTap,
                         child: Container(
                           height: 56,
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                             horizontal: 10,
                           ),
                           decoration: BoxDecoration(
-                              color: Color(0xffBFD7DE),
+                              color: const Color(0xffBFD7DE),
                               borderRadius: BorderRadius.circular(10)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -300,11 +300,11 @@ class CableSubscriptionDefault extends StatelessWidget {
                               Row(
                                 children: [
                                   Padding(
-                                    padding: EdgeInsets.all(15.0),
+                                    padding: const EdgeInsets.all(15.0),
                                     child: SvgPicture.asset(
                                         "assets/media/svg/wallet-option.svg"),
                                   ),
-                                  Text(
+                                  const Text(
                                     "Wallet",
                                     style: TextStyle(
                                         fontSize: 15,
@@ -318,17 +318,17 @@ class CableSubscriptionDefault extends StatelessWidget {
                                   SvgPicture.asset(
                                     "assets/media/svg/dark-naira.svg",
                                     // ignore: deprecated_member_use
-                                    color: Color(0xff003333),
+                                    color: const Color(0xff003333),
                                     height: 12,
                                   ),
-                                  Text(
+                                  const Text(
                                     "35,000.00",
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Color(0xff003333),
                                         fontFamily: "Poppins"),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 5,
                                   ),
                                   controller.select == true
@@ -342,18 +342,18 @@ class CableSubscriptionDefault extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       GestureDetector(
                         onTap: controller.onCardTap,
                         child: Container(
                           height: 56,
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                             horizontal: 10,
                           ),
                           decoration: BoxDecoration(
-                              color: Color(0xffBFD7DE),
+                              color: const Color(0xffBFD7DE),
                               borderRadius: BorderRadius.circular(10)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -361,11 +361,11 @@ class CableSubscriptionDefault extends StatelessWidget {
                               Row(
                                 children: [
                                   Padding(
-                                    padding: EdgeInsets.all(15.0),
+                                    padding: const EdgeInsets.all(15.0),
                                     child: SvgPicture.asset(
                                         "assets/media/svg/card-option.svg"),
                                   ),
-                                  Text(
+                                  const Text(
                                     "Card",
                                     style: TextStyle(
                                         fontSize: 15,
@@ -376,14 +376,14 @@ class CableSubscriptionDefault extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "**** 7196",
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Color(0xff003333),
                                         fontFamily: "Poppins"),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 5,
                                   ),
                                   controller.selected == true
@@ -400,7 +400,7 @@ class CableSubscriptionDefault extends StatelessWidget {
                     ],
                   );
                 }),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 ElevatedButton(
@@ -409,11 +409,11 @@ class CableSubscriptionDefault extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
                         fixedSize: Size(55.5.w, 5.5.h),
-                        backgroundColor: Color(0xff026F2E)),
+                        backgroundColor: const Color(0xff026F2E)),
                     onPressed: () {
-                      Get.to(() => CableSubscriptionSummary());
+                      Get.to(() => const CableSubscriptionSummary());
                     },
-                    child: Text(
+                    child: const Text(
                       "Get DTSV Yanga",
                       style: TextStyle(fontSize: 16, fontFamily: "Poppins"),
                     )),

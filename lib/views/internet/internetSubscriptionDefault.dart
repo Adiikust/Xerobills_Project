@@ -14,9 +14,9 @@ class InternetSubscription extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.only(right: 25, left: 25, top: 10),
+          padding: const EdgeInsets.only(right: 25, left: 25, top: 15),
           child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -29,12 +29,12 @@ class InternetSubscription extends StatelessWidget {
                       },
                       child: Container(
                           color: Colors.transparent,
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               top: 10, left: 2, bottom: 10, right: 10),
                           child: SvgPicture.asset(
                               "assets/media/svg/arrowleft.svg")),
                     ),
-                    Text(
+                    const Text(
                       "Internet Subscription",
                       style: TextStyle(
                           fontFamily: "Poppins",
@@ -46,35 +46,36 @@ class InternetSubscription extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   "Select Beneficiary",
                   style: TextStyle(
                       color: Color(0xff003333),
-                      letterSpacing: 0.5,
                       fontSize: 16,
                       fontFamily: "Poppings"),
                 ),
+                const SizedBox(
+                  height: 10,
+                ),
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 5),
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 10,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 3,
                   ),
                   decoration: BoxDecoration(
-                      color: Color(0xffBFD7DE),
-                      borderRadius: BorderRadius.circular(20)),
+                      color: const Color(0xffBFD7DE),
+                      borderRadius: BorderRadius.circular(9)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(top: 8.0, bottom: 0),
+                            padding: const EdgeInsets.only(top: 8.0, bottom: 0),
                             child: Image.asset(
                               "assets/media/default-avatar.png",
-                              height: 60,
+                              height: 50,
                               scale: 0.5,
                               width: 60,
                             ),
@@ -82,7 +83,7 @@ class InternetSubscription extends StatelessWidget {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
+                            children: const [
                               Text(
                                 "Primary Number",
                                 style: TextStyle(
@@ -93,7 +94,7 @@ class InternetSubscription extends StatelessWidget {
                               Text(
                                 "+234 800 000 0000",
                                 style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 16,
                                     color: Color(0xff003333),
                                     fontFamily: "Poppins"),
                               )
@@ -104,27 +105,9 @@ class InternetSubscription extends StatelessWidget {
                       GetBuilder<DropdownController>(
                           builder: (dropDownController) {
                         return GestureDetector(
-                          onTap: () {
-                            // Get.defaultDialog(
-                            //   content: DropdownButton<String>(
-                            //     value: dropdownController.selectedValue,
-                            //     items: [
-                            //       DropdownMenuItem(
-                            //           child: Text('Option 1'), value: 'Option 1'),
-                            //       DropdownMenuItem(
-                            //           child: Text('Option 2'), value: 'Option 2'),
-                            //       DropdownMenuItem(
-                            //           child: Text('Option 3'), value: 'Option 3'),
-                            //     ],
-                            //     onChanged: (String? value) {
-                            //       dropdownController.setSelectedValue(value ?? '');
-                            //       Get.back();
-                            //     },
-                            //   ),
-                            // );
-                          },
+                          onTap: () {},
                           child: Padding(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: 8.0, vertical: 8),
                             child: SvgPicture.asset(
                                 "assets/media/svg/dropdown.svg"),
@@ -134,38 +117,35 @@ class InternetSubscription extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(8),
                       child: Image.asset(
                         "assets/media/providers/mtn.png",
-                        height: 47,
+                        height: 45,
                       ),
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
+                    const SizedBox(width: 12),
                     Expanded(
                       child: Container(
-                        height: 50,
+                        height: 45,
                         decoration: BoxDecoration(
-                          border: Border.all(color: Color(0xff026F2E)),
+                          border: Border.all(color: const Color(0xff026F2E)),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        padding: EdgeInsets.symmetric(horizontal: 15),
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
+                            const Text(
                               "MTN Network",
                               style: TextStyle(
                                   color: Color(0xff003333),
-                                  letterSpacing: 0.5,
                                   fontSize: 15,
                                   fontFamily: "Poppings"),
                             ),
@@ -176,24 +156,21 @@ class InternetSubscription extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 15,
-                ),
+                const SizedBox(height: 15),
                 Container(
-                  height: 50,
+                  height: 45,
                   decoration: BoxDecoration(
-                    border: Border.all(color: Color(0xff026F2E)),
+                    border: Border.all(color: const Color(0xff026F2E)),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "Daily Bundles",
                         style: TextStyle(
                             color: Color(0xff003333),
-                            letterSpacing: 0.5,
                             fontSize: 15,
                             fontFamily: "Poppings"),
                       ),
@@ -202,10 +179,10 @@ class InternetSubscription extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20.0),
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Expanded(
                         child: Padding(
                           padding: EdgeInsets.only(right: 20.0),
@@ -240,27 +217,38 @@ class InternetSubscription extends StatelessWidget {
                   days: 1,
                   price: 50.00,
                 ),
+                const SizedBox(
+                  height: 10,
+                ),
                 CustomPlanOption(
                   dataAmount: "100MB",
                   days: 1,
                   price: 100.00,
+                ),
+                const SizedBox(
+                  height: 10,
                 ),
                 CustomPlanOption(
                   dataAmount: "1GB",
                   days: 1,
                   price: 300.00,
                 ),
+                const SizedBox(
+                  height: 10,
+                ),
                 CustomPlanOption(
                   dataAmount: "2GB",
                   days: 2,
                   price: 500.00,
+                ),
+                const SizedBox(
+                  height: 10,
                 ),
                 CustomPlanOption(
                   dataAmount: "3GB",
                   days: 2,
                   price: 700.00,
                 ),
-                // CustomPlanOption(dataAmount: "5GB",days: 3, price: 1000.00,),
               ],
             ),
           ),
