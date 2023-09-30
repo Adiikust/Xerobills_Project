@@ -80,7 +80,7 @@ class InternetSubscriptionSummary extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(top: 8.0, bottom: 0),
                             child: Image.asset(
-                              "assets/media/default-avatar.png",
+                              "assets/media/default-avatar-md.png",
                               height: 50,
                               scale: 0.5,
                               width: 60,

@@ -3,8 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:xerobills/widgets/TxtFields/customTxtField.dart';
-import 'package:xerobills/widgets/bottomSheets/viewBeneficiariesOptions.dart';
-import 'package:xerobills/widgets/drop_down_widget.dart';
 import 'package:xerobills/widgets/rich_text.dart';
 
 class MyProfilePersonalUpdate extends StatefulWidget {
@@ -17,7 +15,7 @@ class MyProfilePersonalUpdate extends StatefulWidget {
 
 class _MyProfilePersonalUpdateState extends State<MyProfilePersonalUpdate> {
   String dateTime = "Date of Birth";
-  String? _selectedGender;
+  String selectedGender = "Gender";
   List<String> gender = [
     "Male",
     "Female",
@@ -170,7 +168,7 @@ class _MyProfilePersonalUpdateState extends State<MyProfilePersonalUpdate> {
                           Padding(
                             padding: const EdgeInsets.only(left: 13.0),
                             child: Text(
-                              "Gender",
+                              selectedGender,
                               style: TextStyle(
                                   color: Colors.grey.shade700,
                                   fontSize: 15,
@@ -180,7 +178,12 @@ class _MyProfilePersonalUpdateState extends State<MyProfilePersonalUpdate> {
                           GestureDetector(
                               onTap: () async {
                                 Get.bottomSheet(
-                                  const ViewBeneficiary(),
+                                  buildContainer(
+                                    context: context,
+                                    title: "Gender",
+                                    actions: gender,
+                                    height: 300,
+                                  ),
                                   backgroundColor:
                                       const Color.fromARGB(255, 27, 67, 28),
                                   shape: const RoundedRectangleBorder(
@@ -302,6 +305,124 @@ class _MyProfilePersonalUpdateState extends State<MyProfilePersonalUpdate> {
                 ),
               ],
             ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Container buildContainer({
+    required BuildContext context,
+    required final String title,
+    double? height,
+    required final List<String> actions,
+  }) {
+    return Container(
+      height: height,
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(50),
+          topRight: Radius.circular(50),
+        ),
+        image: DecorationImage(
+            image: AssetImage("assets/media/beneficiary-image.png"),
+            fit: BoxFit.cover),
+      ),
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
+          child: Column(
+            children: [
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 100, vertical: 5),
+                child: Container(
+                  height: 2,
+                  width: 70,
+                  color: const Color(0xffE0E3E8),
+                ),
+              ),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                        fontFamily: "Poppins"),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Get.back();
+                    },
+                    child: SvgPicture.asset(
+                      "assets/media/svg/beneficiary-cancel.svg",
+                      height: 26,
+                      width: 26,
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(height: 10),
+              ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: actions.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedGender = actions[index].toString();
+                          Get.back();
+                        });
+                      },
+                      child: Text(
+                        actions[index].toString(),
+                        style: const TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+              const Spacer(),
+              Column(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 10),
+                    height: 1,
+                    color: const Color(0xffE0E3E8),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Get.back();
+                    },
+                    child: Container(
+                      color: Colors.transparent,
+                      height: 50,
+                      width: MediaQuery.of(context).size.width,
+                      child: const Center(
+                        child: Text(
+                          "Cancel",
+                          style: TextStyle(
+                            fontSize: 17,
+                            color: Colors.white,
+                            fontFamily: "Poppins",
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ],
           ),
         ),
       ),

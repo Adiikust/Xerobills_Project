@@ -23,14 +23,25 @@ class _AirtimeRechargeDefaultState extends State<AirtimeRechargeDefault> {
   final DropdownController dropdownController = Get.put(DropdownController());
 
   List<String> dailyBundlesList = [
-    "MTN Prepaid 1",
-    "MTN Prepaid 2",
-    "MTN Prepaid 3",
-    "MTN Prepaid 4",
-    "MTN Prepaid 5",
+    "MTN Prepaid",
+    "MTN Postpaid",
   ];
 
-  String? _selectedDailyBundles;
+  List<String> dailyBundlesList2 = [
+    "Primary Number",
+    "Bashir Ibrahim",
+    "Zulfah Isimekhal",
+  ];
+
+  List<String> dailyBundlesList3 = [
+    "+234 800 000 0000",
+    "+234 800 000 0000",
+    "+234 800 000 0000",
+  ];
+
+  String? selectedDailyBundles = "MTN Prepaid";
+  String? selectedDailyBundles1 = "Primary Number";
+  String? selectedDailyBundles2 = "+234 800 000 0000";
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +117,7 @@ class _AirtimeRechargeDefaultState extends State<AirtimeRechargeDefault> {
                                   padding: const EdgeInsets.only(
                                       top: 8.0, bottom: 0),
                                   child: Image.asset(
-                                    "assets/media/default-avatar.png",
+                                    "assets/media/default-avatar-md.png",
                                     height: 50,
                                     scale: 0.5,
                                     width: 60,
@@ -115,17 +126,17 @@ class _AirtimeRechargeDefaultState extends State<AirtimeRechargeDefault> {
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children: [
                                     Text(
-                                      "Bashir Ibrahim (Personal)",
-                                      style: TextStyle(
+                                      "$selectedDailyBundles1 (Personal)",
+                                      style: const TextStyle(
                                           fontSize: 14,
                                           color: Color(0xff003333),
                                           fontFamily: "Poppins"),
                                     ),
                                     Text(
-                                      "+234 800 000 0000",
-                                      style: TextStyle(
+                                      selectedDailyBundles2!,
+                                      style: const TextStyle(
                                           fontSize: 16,
                                           color: Color(0xff003333),
                                           fontFamily: "Poppins"),
@@ -136,7 +147,23 @@ class _AirtimeRechargeDefaultState extends State<AirtimeRechargeDefault> {
                             ),
                             InkWell(
                               onTap: () {
-                                dropdownController.onTapped();
+                                Get.bottomSheet(
+                                  buildContainer1(
+                                    actions: dailyBundlesList2,
+                                    actions1: dailyBundlesList3,
+                                    title: "Select Beneficiary",
+                                    context: context,
+                                    height: 400,
+                                  ),
+                                  backgroundColor:
+                                      const Color.fromARGB(255, 27, 67, 28),
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(50),
+                                      topRight: Radius.circular(50),
+                                    ),
+                                  ),
+                                );
                               },
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
@@ -159,30 +186,92 @@ class _AirtimeRechargeDefaultState extends State<AirtimeRechargeDefault> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(10),
-                                    child: Image.asset(
-                                      "assets/media/providers/mtn.png",
-                                      height: 44,
+                                  Padding(
+                                    padding: EdgeInsets.only(top: 1.3.h),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image.asset(
+                                        "assets/media/providers/mtn.png",
+                                        height: 44,
+                                      ),
                                     ),
                                   ),
                                   const SizedBox(
                                     width: 10,
                                   ),
                                   Expanded(
-                                    child: ReusableDropdownContainerTwo(
-                                      itemList:
-                                          dailyBundlesList, // Your list of items
-                                      selectedValue:
-                                          _selectedDailyBundles, // The selected value
-                                      onChanged: (newValue) {
-                                        setState(() {
-                                          _selectedDailyBundles = newValue;
-                                          print(
-                                              "Gender ${_selectedDailyBundles.toString()}");
-                                        });
-                                      },
-                                      hintText: "MTN Network", // The hint text
+                                    child: Padding(
+                                      padding: EdgeInsets.only(top: 1.3.h),
+                                      child: Material(
+                                        shape: const RoundedRectangleBorder(
+                                          side: BorderSide(
+                                            width: 1,
+                                            color: Color(0xff026F2E),
+                                          ),
+                                          borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(8),
+                                            topRight: Radius.circular(8),
+                                            bottomLeft: Radius.circular(8),
+                                            bottomRight: Radius.circular(8),
+                                          ),
+                                        ),
+                                        elevation: 3,
+                                        color: Colors.white,
+                                        child: Container(
+                                          height: 45,
+                                          width: 70.w,
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 15),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    left: 13.0),
+                                                child: Text(
+                                                  selectedDailyBundles!,
+                                                  style: TextStyle(
+                                                      color:
+                                                          Colors.grey.shade700,
+                                                      fontSize: 15,
+                                                      fontFamily: "Poppings"),
+                                                ),
+                                              ),
+                                              GestureDetector(
+                                                  onTap: () async {
+                                                    Get.bottomSheet(
+                                                      buildContainer(
+                                                        context: context,
+                                                        title:
+                                                            "Select Network Plan",
+                                                        actions:
+                                                            dailyBundlesList,
+                                                        height: 250,
+                                                      ),
+                                                      backgroundColor:
+                                                          const Color.fromARGB(
+                                                              255, 27, 67, 28),
+                                                      shape:
+                                                          const RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius.only(
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  50),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  50),
+                                                        ),
+                                                      ),
+                                                    );
+                                                  },
+                                                  child: SvgPicture.asset(
+                                                      "assets/media/svg/vector-2.svg"))
+                                            ],
+                                          ),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -477,6 +566,258 @@ class _AirtimeRechargeDefaultState extends State<AirtimeRechargeDefault> {
                     )),
               ],
             ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Container buildContainer({
+    required BuildContext context,
+    required final String title,
+    double? height,
+    required final List<String> actions,
+  }) {
+    return Container(
+      height: height,
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(50),
+          topRight: Radius.circular(50),
+        ),
+        image: DecorationImage(
+            image: AssetImage("assets/media/beneficiary-image.png"),
+            fit: BoxFit.cover),
+      ),
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
+          child: Column(
+            children: [
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 100, vertical: 5),
+                child: Container(
+                  height: 2,
+                  width: 70,
+                  color: const Color(0xffE0E3E8),
+                ),
+              ),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                        fontFamily: "Poppins"),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Get.back();
+                    },
+                    child: SvgPicture.asset(
+                      "assets/media/svg/beneficiary-cancel.svg",
+                      height: 26,
+                      width: 26,
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(height: 10),
+              ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: actions.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedDailyBundles = actions[index].toString();
+                          Get.back();
+                        });
+                      },
+                      child: Text(
+                        actions[index].toString(),
+                        style: const TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+              const Spacer(),
+              Column(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 10),
+                    height: 1,
+                    color: const Color(0xffE0E3E8),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Get.back();
+                    },
+                    child: Container(
+                      color: Colors.transparent,
+                      height: 50,
+                      width: MediaQuery.of(context).size.width,
+                      child: const Center(
+                        child: Text(
+                          "Cancel",
+                          style: TextStyle(
+                            fontSize: 17,
+                            color: Colors.white,
+                            fontFamily: "Poppins",
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Container buildContainer1({
+    required BuildContext context,
+    required final String title,
+    double? height,
+    required final List<String> actions,
+    required final List<String> actions1,
+  }) {
+    return Container(
+      height: height,
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(50),
+          topRight: Radius.circular(50),
+        ),
+        image: DecorationImage(
+            image: AssetImage("assets/media/beneficiary-image.png"),
+            fit: BoxFit.cover),
+      ),
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
+          child: Column(
+            children: [
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 100, vertical: 5),
+                child: Container(
+                  height: 2,
+                  width: 70,
+                  color: const Color(0xffE0E3E8),
+                ),
+              ),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                        fontFamily: "Poppins"),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Get.back();
+                    },
+                    child: SvgPicture.asset(
+                      "assets/media/svg/beneficiary-cancel.svg",
+                      height: 26,
+                      width: 26,
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(height: 10),
+              ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: actions.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedDailyBundles1 = actions[index].toString();
+                          selectedDailyBundles2 = actions1[index].toString();
+                          Get.back();
+                        });
+                      },
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            actions[index].toString(),
+                            style: const TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
+                              fontFamily: "Poppins",
+                            ),
+                          ),
+                          const SizedBox(height: 5),
+                          Text(
+                            actions1[index].toString(),
+                            style: const TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
+                              fontFamily: "Poppins",
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+              const Spacer(),
+              Column(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 10),
+                    height: 1,
+                    color: const Color(0xffE0E3E8),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Get.back();
+                    },
+                    child: Container(
+                      color: Colors.transparent,
+                      height: 50,
+                      width: MediaQuery.of(context).size.width,
+                      child: const Center(
+                        child: Text(
+                          "Cancel",
+                          style: TextStyle(
+                            fontSize: 17,
+                            color: Colors.white,
+                            fontFamily: "Poppins",
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ],
           ),
         ),
       ),
