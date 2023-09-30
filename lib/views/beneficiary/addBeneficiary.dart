@@ -52,24 +52,25 @@ class _AddBeneficiaryState extends State<AddBeneficiary> {
                       firstText: "Add",
                       secondText: "Beneficiary",
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Get.back();
-                      },
-                      child: Container(
-                          color: Colors.transparent,
-                          padding: const EdgeInsets.only(
-                            top: 10,
-                            left: 10,
-                            bottom: 10,
-                            right: 2,
-                          ),
-                          child: SvgPicture.asset(
-                            "assets/media/svg/cancel.svg",
-                            height: 26,
-                            width: 26,
-                          )),
-                    ),
+                    // GestureDetector(
+                    //   onTap: () {
+                    //     Get.back();
+                    //   },
+                    //   child: Container(
+                    //       color: Colors.transparent,
+                    //       padding: const EdgeInsets.only(
+                    //         top: 10,
+                    //         left: 10,
+                    //         bottom: 10,
+                    //         right: 2,
+                    //       ),
+                    //       child: SvgPicture.asset(
+                    //         "assets/media/svg/cancel.svg",
+                    //         height: 26,
+                    //         width: 26,
+                    //       )),
+                    // ),
+                    SizedBox()
                   ],
                 ),
                 const SizedBox(
@@ -237,7 +238,7 @@ class _AddBeneficiaryState extends State<AddBeneficiary> {
                           elevation: 4,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
-                          fixedSize: Size(30.5.w, 5.5.h),
+                          fixedSize: Size(30.5.w, 6.5.h),
                           backgroundColor: const Color(0xff026F2E)),
                       onPressed: () {},
                       child: const Text(

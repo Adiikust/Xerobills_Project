@@ -19,17 +19,6 @@ class TransactionPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    // GestureDetector(
-                    //   onTap: () {
-                    //     Get.back();
-                    //   },
-                    //   child: Container(
-                    //       color: Colors.transparent,
-                    //       padding: const EdgeInsets.only(
-                    //           top: 10, left: 2, bottom: 10, right: 10),
-                    //       child: SvgPicture.asset(
-                    //           "assets/media/svg/arrowleft.svg")),
-                    // ),
                     Text(
                       "Transactions",
                       style: TextStyle(
@@ -38,9 +27,6 @@ class TransactionPage extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                           color: Color(0xff026F2E)),
                     ),
-                    // Container(
-                    //   width: 30,
-                    // ),
                   ],
                 ),
                 const SizedBox(

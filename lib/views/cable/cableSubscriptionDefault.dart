@@ -482,7 +482,7 @@ class _CableSubscriptionDefaultState extends State<CableSubscriptionDefault> {
                         elevation: 4,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
-                        fixedSize: Size(55.5.w, 5.5.h),
+                        fixedSize: Size(30.5.w, 6.5.h),
                         backgroundColor: const Color(0xff026F2E)),
                     onPressed: () {
                       Get.to(() => const CableSubscriptionSummary());

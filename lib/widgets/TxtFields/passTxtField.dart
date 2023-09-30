@@ -32,6 +32,12 @@ class passTxtField extends StatelessWidget {
               autocorrect: false,
               // onChanged: (val) => _pwd = val,
               decoration: InputDecoration(
+                labelText: 'Password',
+                labelStyle: const TextStyle(
+                    color: Color(0xff000000),
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "Poppings",
+                    fontSize: 15),
                 hintText: 'Password',
                 hintStyle: const TextStyle(
                     color: Colors.grey, fontFamily: "Poppings", fontSize: 15),

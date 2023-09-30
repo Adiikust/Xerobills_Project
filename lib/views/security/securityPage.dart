@@ -40,24 +40,25 @@ class SecurityPage extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           color: Color(0xff026F2E)),
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Get.back();
-                      },
-                      child: Container(
-                        color: Colors.transparent,
-                        padding: const EdgeInsets.only(
-                          top: 10,
-                          left: 10,
-                          bottom: 10,
-                        ),
-                        child: SvgPicture.asset(
-                          "assets/media/svg/cancel.svg",
-                          width: 24,
-                          height: 24,
-                        ),
-                      ),
-                    ),
+                    // GestureDetector(
+                    //   onTap: () {
+                    //     Get.back();
+                    //   },
+                    //   child: Container(
+                    //     color: Colors.transparent,
+                    //     padding: const EdgeInsets.only(
+                    //       top: 10,
+                    //       left: 10,
+                    //       bottom: 10,
+                    //     ),
+                    //     child: SvgPicture.asset(
+                    //       "assets/media/svg/cancel.svg",
+                    //       width: 24,
+                    //       height: 24,
+                    //     ),
+                    //   ),
+                    // ),
+                    SizedBox()
                   ],
                 ),
                 const SizedBox(
@@ -177,7 +178,7 @@ class SecurityPage extends StatelessWidget {
                           elevation: 4,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
-                          fixedSize: Size(30.5.w, 5.5.h),
+                          fixedSize: Size(30.5.w, 6.5.h),
                           backgroundColor: const Color(0xff026F2E)),
                       onPressed: () {},
                       child: const Text(

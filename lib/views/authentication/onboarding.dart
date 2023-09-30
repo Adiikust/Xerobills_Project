@@ -99,7 +99,7 @@ class Onboarding extends StatelessWidget {
                                 elevation: 4,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10)),
-                                fixedSize: const Size(222, 50),
+                                fixedSize: const Size(222, 53),
                                 backgroundColor: const Color(0xff026F2E)),
                             onPressed: () {
                               Get.to(() => const LoginPage());
@@ -135,7 +135,7 @@ class Onboarding extends StatelessWidget {
                               elevation: 4,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10)),
-                              fixedSize: const Size(270, 50),
+                              fixedSize: const Size(270, 53),
                               backgroundColor: Colors.white),
                           onPressed: () {
                             Get.to(() => const CreateAccount());

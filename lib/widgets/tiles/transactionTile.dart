@@ -88,8 +88,9 @@ class TransactionListTile extends StatelessWidget {
                       "assets/media/svg/naira.svg",
                       height: 11,
                       width: 11,
+                      color: Colors.red,
                       // ignore: deprecated_member_use
-                      color: const Color(0xff003333),
+                      // color: const Color(0xff003333),
                     ),
                     Text(
                       " $amount",

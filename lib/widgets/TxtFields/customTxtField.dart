@@ -5,10 +5,12 @@ class CustomTxtField extends StatelessWidget {
   CustomTxtField(
       {super.key,
       required this.hintText,
+      this.labelText,
       required this.obscureText,
       this.hintStyle,
       required this.topPAdding});
   String hintText;
+  String? labelText;
   bool obscureText;
   double topPAdding;
   TextStyle? hintStyle;
@@ -34,6 +36,12 @@ class CustomTxtField extends StatelessWidget {
             suffixIconColor: Colors.grey.shade700,
             suffixIconConstraints:
                 const BoxConstraints(maxWidth: 20, maxHeight: 20),
+            labelText: labelText,
+            labelStyle: const TextStyle(
+                color: Color(0xff000000),
+                fontWeight: FontWeight.w500,
+                fontFamily: "Poppings",
+                fontSize: 15),
             hintText: hintText,
             hintStyle: hintStyle,
             contentPadding: const EdgeInsets.only(left: 29, right: 5),

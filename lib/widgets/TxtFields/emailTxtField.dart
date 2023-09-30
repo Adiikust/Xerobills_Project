@@ -24,6 +24,12 @@ class emailTxtField extends StatelessWidget {
           keyboardType: TextInputType.emailAddress,
           //onChanged: (val) => _email = val,
           decoration: InputDecoration(
+            labelText: 'Email Address',
+            labelStyle: TextStyle(
+                color: Color(0xff000000),
+                fontWeight: FontWeight.w500,
+                fontFamily: "Poppings",
+                fontSize: 15),
             hintText: 'Email Address',
             hintStyle: TextStyle(
                 color: Colors.grey, fontFamily: "Poppings", fontSize: 15),

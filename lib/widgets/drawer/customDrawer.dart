@@ -27,20 +27,19 @@ class CustomDrawer extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      SizedBox(
-                        height: 7.h,
-                      ),
                       Stack(
                         alignment: Alignment.center,
                         children: [
                           SvgPicture.asset(
                             "assets/media/svg/drawerbg.svg",
+                            // width: Get.width,
+                            // height: ,
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               SizedBox(
-                                height: 7.h,
+                                height: 14.h,
                               ),
                               InkWell(
                                 onTap: () {

@@ -151,24 +151,29 @@ class HomePage extends StatelessWidget {
                                     ),
                                   ],
                                 ),
+                                SizedBox(height: 4),
                                 //fund wallet button
-                                ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                      elevation: 4,
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 5.5),
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10)),
-                                      fixedSize: const Size(100, 30),
-                                      backgroundColor: const Color(0xff026F2E)),
-                                  onPressed: () {},
-                                  child: const Text(
-                                    "Fund Wallet",
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w300,
-                                        fontFamily: "Poppings"),
+                                SizedBox(
+                                  height: 30,
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        elevation: 4,
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 5.5),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8)),
+                                        fixedSize: const Size(100, 30),
+                                        backgroundColor:
+                                            const Color(0xff026F2E)),
+                                    onPressed: () {},
+                                    child: const Text(
+                                      "Fund Wallet",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w300,
+                                          fontFamily: "Poppings"),
+                                    ),
                                   ),
                                 ),
                               ],

@@ -80,6 +80,7 @@ class CreateAccount extends StatelessWidget {
                     height: 0.5.h,
                   ),
                   CustomTxtField(
+                    labelText: "First Name",
                     hintText: "First Name",
                     obscureText: false,
                     topPAdding: 2.h,
@@ -89,6 +90,7 @@ class CreateAccount extends StatelessWidget {
                         fontFamily: "Poppings"),
                   ),
                   CustomTxtField(
+                    labelText: "Last Name",
                     hintText: "Last Name",
                     obscureText: false,
                     topPAdding: 1.8.h,
@@ -99,6 +101,7 @@ class CreateAccount extends StatelessWidget {
                         fontFamily: "Poppings"),
                   ),
                   CustomTxtField(
+                    labelText: "Email Address",
                     hintText: "Email Address",
                     obscureText: false,
                     topPAdding: 1.8.h,
@@ -108,6 +111,7 @@ class CreateAccount extends StatelessWidget {
                         fontFamily: "Poppings"),
                   ),
                   CustomTxtField(
+                    labelText: "Phone Number",
                     hintText: "Phone Number",
                     obscureText: false,
                     topPAdding: 1.8.h,
@@ -118,6 +122,7 @@ class CreateAccount extends StatelessWidget {
                   ),
                   CustomTxtField(
                     hintText: "Password",
+                    labelText: "Password",
                     obscureText: false,
                     topPAdding: 1.8.h,
                     hintStyle: TextStyle(
@@ -127,6 +132,7 @@ class CreateAccount extends StatelessWidget {
                   ),
                   CustomTxtField(
                     hintText: "Confirm Password",
+                    labelText: "Confirm Password",
                     obscureText: false,
                     topPAdding: 1.8.h,
                     hintStyle: TextStyle(
@@ -143,7 +149,7 @@ class CreateAccount extends StatelessWidget {
                           elevation: 4,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
-                          fixedSize: const Size(270, 50),
+                          fixedSize: const Size(270, 53),
                           backgroundColor: const Color(0xff026F2E)),
                       onPressed: () {
                         Get.to(() => const VerifyEmailPage());
