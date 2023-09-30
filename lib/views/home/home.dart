@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.only(top: 10.0),
                       child: Image.asset(
-                        "assets/media/default-avatar.png",
+                        "assets/media/default-avatar-md.png",
                         height: 50,
                         width: 50,
                       ),
@@ -197,7 +197,7 @@ class HomePage extends StatelessWidget {
                         shadowColor: const Color(0xff009933),
                         color: Colors.white,
                         child: InkWell(
-                          onTap: ()=> Get.to(ManageProfiles()),
+                          onTap: () => Get.to(ManageProfiles()),
                           child: Container(
                             height: 40,
                             width: 74.w,
@@ -210,7 +210,8 @@ class HomePage extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: 15, fontFamily: "Poppings"),
                                 ),
-                                SvgPicture.asset("assets/media/svg/vector-2.svg")
+                                SvgPicture.asset(
+                                    "assets/media/svg/vector-2.svg")
                               ],
                             ),
                           ),

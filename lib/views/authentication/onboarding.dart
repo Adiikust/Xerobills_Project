@@ -61,27 +61,32 @@ class Onboarding extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           fontFamily: "Poppings"),
                     )),
-                Positioned(child: Image.asset("assets/media/xero-girl.png")),
                 Positioned(
-                    top: 330,
-                    left: 27.sp,
-                    child: const Text(
-                      "A billing tool you deserve",
-                      style: TextStyle(
-                          color: Color(0xff002911),
-                          fontSize: 15,
-                          fontFamily: "Poppings"),
-                    )),
-                Positioned(
-                    top: 355,
-                    left: 27.sp,
-                    child: const Text(
-                      "and so much more.",
-                      style: TextStyle(
-                          color: Color(0xff002911),
-                          fontSize: 15,
-                          fontFamily: "Poppings"),
-                    )),
+                    child: Image.asset(
+                  "assets/media/girl.png",
+                  height: 90.h,
+                  //width: 100.w,
+                )),
+                // Positioned(
+                //     top: 100.h,
+                //     left: 2.w,
+                //     child: Text(
+                //       "A billing tool you deserve",
+                //       style: TextStyle(
+                //           color: Color(0xff002911),
+                //           fontSize: 13.sp,
+                //           fontFamily: "Poppings"),
+                //     )),
+                // Positioned(
+                //     top: 350.h,
+                //     left: 27.w,
+                //     child: Text(
+                //       "and so much more.",
+                //       style: TextStyle(
+                //           color: Color(0xff002911),
+                //           fontSize: 13.sp,
+                //           fontFamily: "Poppings"),
+                //     )),
                 Positioned(
                   bottom: 30.sp,
                   child: Column(

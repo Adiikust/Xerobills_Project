@@ -171,12 +171,12 @@ class ManageProfiles extends StatelessWidget {
                                                   width: 13,
                                                 ),
                                     ),
-                                    const Column(
+                                    Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
-                                      children: [
+                                      children: const [
                                         Text(
                                           "Personal",
                                           style: TextStyle(
