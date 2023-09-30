@@ -214,7 +214,10 @@ class CustomDrawer extends StatelessWidget {
                         bottom: 20,
                         child: Column(
                           children: [
-                            Image.asset("assets/media/default-avatar-md.png"),
+                            Image.asset(
+                              "assets/media/default-avatar-md.png",
+                              height: 70,
+                            ),
                             const Text(
                               "Bashir Ibrahim",
                               style: TextStyle(

@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:xerobills/widgets/TxtFields/customTxtField.dart';
+import 'package:xerobills/widgets/bottomSheets/viewBeneficiariesOptions.dart';
 import 'package:xerobills/widgets/drop_down_widget.dart';
 import 'package:xerobills/widgets/rich_text.dart';
 
@@ -139,18 +140,63 @@ class _MyProfilePersonalUpdateState extends State<MyProfilePersonalUpdate> {
                       fontFamily: "Poppings"),
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 5,
                 ),
-                ReusableDropdownContainer(
-                  itemList: gender, // Your list of items
-                  selectedValue: _selectedGender, // The selected value
-                  onChanged: (newValue) {
-                    setState(() {
-                      _selectedGender = newValue;
-                      print("Gender ${_selectedGender.toString()}");
-                    });
-                  },
-                  hintText: "Gender", // The hint text
+
+                Padding(
+                  padding: EdgeInsets.only(top: 1.3.h),
+                  child: Material(
+                    shape: const RoundedRectangleBorder(
+                      side: BorderSide(
+                        width: 1,
+                        color: Color(0xff026F2E),
+                      ),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(8),
+                        topRight: Radius.circular(18),
+                        bottomLeft: Radius.circular(8),
+                        bottomRight: Radius.circular(8),
+                      ),
+                    ),
+                    elevation: 3,
+                    color: Colors.white,
+                    child: Container(
+                      height: 45,
+                      width: 70.w,
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 13.0),
+                            child: Text(
+                              "Gender",
+                              style: TextStyle(
+                                  color: Colors.grey.shade700,
+                                  fontSize: 15,
+                                  fontFamily: "Poppings"),
+                            ),
+                          ),
+                          GestureDetector(
+                              onTap: () async {
+                                Get.bottomSheet(
+                                  const ViewBeneficiary(),
+                                  backgroundColor:
+                                      const Color.fromARGB(255, 27, 67, 28),
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(50),
+                                      topRight: Radius.circular(50),
+                                    ),
+                                  ),
+                                );
+                              },
+                              child: SvgPicture.asset(
+                                  "assets/media/svg/vector-2.svg"))
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
 
                 const SizedBox(
