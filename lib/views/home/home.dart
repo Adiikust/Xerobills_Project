@@ -9,6 +9,7 @@ import 'package:xerobills/views/beneficiary/beneficiaries.dart';
 import 'package:xerobills/views/cable/cableSubscriptionDefault.dart';
 import 'package:xerobills/views/electricity/electricityBillDefault.dart';
 import 'package:xerobills/views/notification/notificationPage.dart';
+import 'package:xerobills/views/profile/manageProfiles.dart';
 import 'package:xerobills/views/transactions/transactionPage.dart';
 import 'package:xerobills/widgets/tiles/myRecentsListTile.dart';
 import 'package:xerobills/widgets/quickactions/quickActionButton.dart';
@@ -26,6 +27,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.white,
@@ -194,20 +196,23 @@ class HomePage extends StatelessWidget {
                         elevation: 3,
                         shadowColor: const Color(0xff009933),
                         color: Colors.white,
-                        child: Container(
-                          height: 40,
-                          width: 74.w,
-                          padding: const EdgeInsets.symmetric(horizontal: 15),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              const Text(
-                                "Personal",
-                                style: TextStyle(
-                                    fontSize: 15, fontFamily: "Poppings"),
-                              ),
-                              SvgPicture.asset("assets/media/svg/vector-2.svg")
-                            ],
+                        child: InkWell(
+                          onTap: ()=> Get.to(ManageProfiles()),
+                          child: Container(
+                            height: 40,
+                            width: 74.w,
+                            padding: const EdgeInsets.symmetric(horizontal: 15),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                const Text(
+                                  "Personal",
+                                  style: TextStyle(
+                                      fontSize: 15, fontFamily: "Poppings"),
+                                ),
+                                SvgPicture.asset("assets/media/svg/vector-2.svg")
+                              ],
+                            ),
                           ),
                         ),
                       ),

@@ -32,7 +32,7 @@ class ManageProfiles extends StatelessWidget {
                             SvgPicture.asset("assets/media/svg/arrowleft.svg")),
                   ),
                   CustomRichText(
-                    firstText: "Manage",
+                    firstText: "Switch",
                     secondText: "Profiles",
                   ),
                   GestureDetector(
@@ -133,7 +133,7 @@ class ManageProfiles extends StatelessWidget {
                               horizontal: 10,
                             ),
                             decoration: BoxDecoration(
-                              color: controller.selectedOptions[index] == true
+                              color: index == 0
                                   ? const Color(0xffBFD7DE)
                                   : Colors.white,
                               border:
@@ -171,12 +171,12 @@ class ManageProfiles extends StatelessWidget {
                                                   width: 13,
                                                 ),
                                     ),
-                                    Column(
+                                    const Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
-                                      children: const [
+                                      children: [
                                         Text(
                                           "Personal",
                                           style: TextStyle(
