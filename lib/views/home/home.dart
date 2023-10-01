@@ -340,7 +340,7 @@ class HomePage extends StatelessWidget {
                               child: Text(
                                 "Beneficiaries",
                                 style: TextStyle(
-                                    color: Color(0xff2FB73B),
+                                    color: Color(0xFF2FB73B),
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500,
                                     fontFamily: "Poppings"),
@@ -382,7 +382,7 @@ class HomePage extends StatelessWidget {
                               child: Text(
                                 "Offers",
                                 style: TextStyle(
-                                    color: Color(0xff2FB73B),
+                                    color: Color(0xFF2FB73B),
                                     fontSize: 15,
                                     fontFamily: "Poppings"),
                               ),

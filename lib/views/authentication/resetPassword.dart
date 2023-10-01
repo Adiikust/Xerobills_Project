@@ -62,7 +62,7 @@ class ResetPassword extends StatelessWidget {
                         style: TextStyle(
                             color: Color(0xff003333),
                             fontSize: 24,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w500,
                             fontFamily: "Poppings"),
                       ),
                       GestureDetector(
